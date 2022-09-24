@@ -1,0 +1,33 @@
+.wrapper {
+    width: 1536px;
+    height: 300px;
+    background-image: url('https://raw.githubusercontent.com/trananhtuat/react-movie/main/src/assets/footer-bg.jpg');
+}
+
+.information {
+    width: 800px;
+    height: 240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-col {
+    margin: 54px 0 0 30px;
+}
+
+.information-item {
+    width: 200px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white-color);
+    padding: 10px 0;
+    transition: all 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}

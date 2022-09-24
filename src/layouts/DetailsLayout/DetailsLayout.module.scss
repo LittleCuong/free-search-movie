@@ -1,0 +1,127 @@
+.banner {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 20%;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, rgb(8, 8, 8), rgba(rgb(59, 59, 59), 0));
+    }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 1600px;
+    // background: linear-gradient(#020024, #050536, #2a031c, #3e0707);
+    background-color: #100720;
+}
+
+// Container-header
+.container-header {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+
+.image {
+    width: 320px;
+    height: 400px;
+    margin-left: 60px;
+    border-radius: 6px;
+    box-shadow: 1px 0 rgba(rgb(0, 0, 0), 0.6);
+    object-fit: cover;
+}
+
+.movie-information {
+    flex: 1;
+    margin-left: 40px;
+}
+
+.movie-name {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.movie-genres {
+    display: flex;
+    align-items: center;
+}
+
+.genres {
+    display: block;
+    height: 30px;
+    line-height: 3rem;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #180A0A;
+    padding: 4px 10px 4px 10px;
+    margin-right: 10px;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.6;
+    }
+}
+
+.movie-overview {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.movie-casts {
+    height: 300px;
+}
+
+.movie-casts > h3 {
+    margin: 4px 0 10px 0;
+    font-size: 2.4rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+// Container-body
+.container-body {
+    // position: absolute;
+    // top: 300px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 700px;
+}
+
+.container-similar {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    width: 1416px;
+    height: 400px;
+}
