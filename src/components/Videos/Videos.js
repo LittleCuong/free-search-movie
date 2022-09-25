@@ -13,13 +13,8 @@ function Videos({className}) {
                 muted
                 poster='https://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/5fe2d564b3fa649cf7a129b2_transfomers-the-last-knight-1.jpg'
                 className={className}    
-<<<<<<< HEAD
-                // src={"." + video}        
-                src="/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4"     
-=======
                 //src={"." + video}      
-                src="/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4""
->>>>>>> d53ff081b349564dfd99f30a366ecb083111f686
+                src="/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4"
             >         
             </video>)  
 
