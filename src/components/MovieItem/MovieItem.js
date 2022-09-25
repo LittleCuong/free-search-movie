@@ -5,6 +5,7 @@ import apiConfig from "~/api/apiConfig";
 
 import styles from './MovieItem.module.scss';
 import { Link } from "react-router-dom";
+import config from "~/config/config";
 
 const cx = classNames.bind(styles)
 
