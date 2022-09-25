@@ -6,7 +6,8 @@ import { privateRoutes, publicRoutes } from '~/routes/routes.js';
 
 function App() {
   return (
-        <HashRouter>
+        // <HashRouter>
+        <Router>
             <div className="App" style={{overflow: "hidden"}}>
                 <Routes>
                     {publicRoutes.map((route, index) => {
@@ -59,7 +60,8 @@ function App() {
                     })}
                 </Routes>
             </div>
-        </HashRouter>
+        </Router>
+        // </HashRouter>
   )
 }
 
