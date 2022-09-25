@@ -84,7 +84,7 @@ function Billboard() {
                         className={cx('billboard-video')}    
                         onEnded={handleEnded}
                         // src={video}
-                        src="/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4"                   
+                        src="https://littlecuong.github.io/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4"                   
                     >         
                     </video>
                     <div className={cx('billboard-infor')}>
