@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/LittleCuong/cng-movie/static/css/main.e9e9202a.css",
+    "main.js": "/LittleCuong/cng-movie/static/js/main.e6d57e96.js",
+    "static/js/787.51c34003.chunk.js": "/LittleCuong/cng-movie/static/js/787.51c34003.chunk.js",
+    "static/media/transformer.mp4": "/LittleCuong/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4",
+    "index.html": "/LittleCuong/cng-movie/index.html",
+    "main.e9e9202a.css.map": "/LittleCuong/cng-movie/static/css/main.e9e9202a.css.map",
+    "main.e6d57e96.js.map": "/LittleCuong/cng-movie/static/js/main.e6d57e96.js.map",
+    "787.51c34003.chunk.js.map": "/LittleCuong/cng-movie/static/js/787.51c34003.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9e9202a.css",
+    "static/js/main.e6d57e96.js"
+  ]
+}
