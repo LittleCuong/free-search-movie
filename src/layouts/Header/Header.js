@@ -6,6 +6,8 @@ import {AiOutlineCaretUp, AiFillCaretDown} from 'react-icons/ai'
 import styles from './Header.module.scss';
 import Search from '../Search/Search';
 import { Link } from 'react-router-dom';
+import config from '~/config/config';
+
 
 const cx = classNames.bind(styles)
 
@@ -30,7 +32,7 @@ function Header({className}) {
     return (
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
             <div className={cx('left')}>
-                <Link to="/home">
+                <Link to={config.routes.home}>
                     <img 
                         src='https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/299271085_5479761142082361_3928683515544971155_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=bA2Td7Fs2oQAX-rt2Sj&_nc_ht=scontent.fsgn5-5.fna&oh=03_AVIjdOtlp0k4mzIuYBx2RrIHHN0xDDsYhbH_TAEmyhc-9A&oe=63245AEF' 
                         alt='CNG'
