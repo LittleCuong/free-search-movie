@@ -80,7 +80,8 @@ function Billboard() {
                     <video      
                         ref={videoRef}                                   
                         muted={true}
-                        poster='https://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/5fe2d564b3fa649cf7a129b2_transfomers-the-last-knight-1.jpg'
+                        poster="https://wallpaperaccess.com/full/3031452.jpg"
+                        // poster='https://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/5fe2d564b3fa649cf7a129b2_transfomers-the-last-knight-1.jpg'
                         className={cx('billboard-video')}    
                         onEnded={handleEnded}
                         src={video}
