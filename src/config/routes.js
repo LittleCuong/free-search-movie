@@ -1,6 +1,6 @@
 
 const routes = {
-    home: '/home',
+    home: 'cng-movie/home',
     type: '/:type/',
     details: '/:category/:id/',
     register: '/register',
