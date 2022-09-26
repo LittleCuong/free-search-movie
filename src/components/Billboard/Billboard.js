@@ -22,7 +22,7 @@ function Billboard() {
     useEffect(() => {
         window.addEventListener('scroll' ,(e) => {
             const position = window.scrollY;
-            if (position > 0 && position < 400) {
+            if (position < 400) {
                 if (videoRef.current?.play()) {
                     pauseRef.current.style.display = 'block'
                 }
