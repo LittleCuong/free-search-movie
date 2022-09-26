@@ -30,11 +30,13 @@ function Header({className}) {
     return (
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
             <div className={cx('left')}>
-                <img 
-                    src='https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/299271085_5479761142082361_3928683515544971155_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=bA2Td7Fs2oQAX-rt2Sj&_nc_ht=scontent.fsgn5-5.fna&oh=03_AVIjdOtlp0k4mzIuYBx2RrIHHN0xDDsYhbH_TAEmyhc-9A&oe=63245AEF' 
-                    alt='CNG'
-                    className={cx('logo')}
-                />
+                <Link to="/home">
+                    <img 
+                        src='https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/299271085_5479761142082361_3928683515544971155_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=bA2Td7Fs2oQAX-rt2Sj&_nc_ht=scontent.fsgn5-5.fna&oh=03_AVIjdOtlp0k4mzIuYBx2RrIHHN0xDDsYhbH_TAEmyhc-9A&oe=63245AEF' 
+                        alt='CNG'
+                        className={cx('logo')}
+                    />
+                </Link>
                 <ul className={cx('navbar_list-left', 'navbar-list')} >
                     <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
                         <a href='/' className={cx('navbar_item-link')}>For You</a>
