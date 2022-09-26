@@ -1,11 +1,11 @@
 
 const routes = {
-    home: 'cng-movie/',
-    type: 'cng-movie/:type/',
-    details: 'cng-movie/:category/:id/',
-    register: 'cng-movie/register',
-    login: 'cng-movie/login',
-    private: 'cng-movie/user',
+    home: 'cng-movie/home',
+    type: '/:type/',
+    details: '/:category/:id/',
+    register: '/register',
+    login: '/login',
+    private: '/user',
 };
 
 export default routes;
