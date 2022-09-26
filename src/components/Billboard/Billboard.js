@@ -73,7 +73,7 @@ function Billboard() {
                 <img 
                     ref={posterRef}
                     className={cx('billboard-poster')}     
-                    src="https://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/5fe2d564b3fa649cf7a129b2_transfomers-the-last-knight-1.jpg" 
+                    src="https://wallpaperaccess.com/full/3031452.jpg"
                     alt="Video"
                 />            
                 <div className={cx('billboard-trailer')}>             
@@ -81,19 +81,13 @@ function Billboard() {
                         ref={videoRef}                                   
                         muted={true}
                         poster="https://wallpaperaccess.com/full/3031452.jpg"
-                        // poster='https://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/5fe2d564b3fa649cf7a129b2_transfomers-the-last-knight-1.jpg'
                         className={cx('billboard-video')}    
                         onEnded={handleEnded}
-                        src={video}
-                        // src="https://littlecuong.github.io/cng-movie/static/media/transformer.083d2c098b565247dd74.mp4"                   
+                        src={video}        
                     >         
                     </video>
                     <div className={cx('billboard-infor')}>
-                        <img 
-                            className={cx('movie-name')}
-                            src="https://scontent.xx.fbcdn.net/v/t1.15752-9/299458787_888042988836270_8540304598895231043_n.png?_nc_cat=109&ccb=1-7&_nc_sid=aee45a&_nc_ohc=3bgDD7h1xVEAX9xikn5&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVJ5z9VgGZ3-a5UaqYuc4ZAExengn6vuhn67aVC-IZJFBw&oe=63276575"
-                            alt="Transformers"
-                        />
+                        <h3 className={cx('movie-name')}>Transformers 5: The Last Knigth</h3>
                         <div className={cx('infor')}>
                             <span className={cx('release')}>2017</span>
                             <span className={cx('divider')}></span>
