@@ -15,6 +15,7 @@ const cx = classNames.bind(styles)
 
 function Header({className}) {
     const [background, setBackground] = useState(false)
+    const [menuMobile, setMenuMobile] = useState(false)
 
     useEffect(() => {
         window.addEventListener('scroll', changeBackground) 
@@ -31,10 +32,16 @@ function Header({className}) {
     const wrapper = cx('wrapper', 'grid', 'row', 'col' )
     const wrapperWithBackground = cx('wrapper', 'show', 'grid', 'row', 'col')
 
+
+    // Handle
+    const handleMenuMobile = () => {
+        setMenuMobile(true)
+    }
+
     return (
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
             <div className={cx('left')}>
-                <ul className={cx('navbar_list-left', 'navbar-list', 'hide-on-mobile')} >
+                <ul className={cx('navbar_list-left', 'navbar-list', 'hide-on-mobile', 'hide-on-mobile-lowRel')} >
                     <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
                         <span  className={cx('navbar_item-link')}>For You</span>
                     </li>
@@ -79,9 +86,19 @@ function Header({className}) {
                         </li>
                     </HeadlessTippy>
                 </ul>
-                <button className={cx('menu_mobile-btn')}>
-                    <AiOutlineMenu className={cx('menu_mobile-icon')}/>
-                </button>
+                <HeadlessTippy
+                        interactive       
+                        visible={menuMobile}               
+                        render={attrs => (
+                            <div className={cx('menu-mobile')}>
+
+                            </div>
+                        )}
+                    >
+                        <button className={cx('menu_mobile-btn')} onClick={handleMenuMobile}>
+                            <AiOutlineMenu className={cx('menu_mobile-icon')}/>
+                        </button>
+                    </HeadlessTippy>                
             </div>
             <div className={cx('right')}>
                 <Search/>

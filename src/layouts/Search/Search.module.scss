@@ -663,3 +663,49 @@
         left: -305px;
     }
 }
+
+@media (max-width: 300px) {
+    .search {
+        width: 140px;
+        height: 30px;
+        margin: 0;
+    }
+
+    .input {
+        font-size: 1rem;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+    .delete-icon {
+        top: 10px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .loading-icon {
+        top: 10px;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .divider {
+        top: 8px;
+        right: 34px;
+        width: 0.8px;
+        height: 14px;
+    }
+
+    .icon-search {
+        top: 7px;
+        right: 10px;
+        width: 20px;
+        height: 15px;
+    }
+
+    .search-result {
+        position: absolute;
+        top: -15px;
+        left: -305px;
+    }
+}

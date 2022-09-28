@@ -791,7 +791,7 @@
         height: 26px;
         border: none;
         background-color: transparent;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .menu_mobile-icon {
@@ -802,6 +802,60 @@
 
     .right {
         max-width: 600px;
+        height: 30px;
+    }
+
+    .register-button {
+        width: 50px;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+    .register-text {
+        line-height: 2.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .hide-on-mobile-lowRel {
+        display: none;
+    }
+
+    .wrapper {
+        max-width: 300px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left {
+        max-width: 10px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .right {
+        margin: 0;
+    }
+
+    .menu_mobile-btn {
+        display: block;
+        width: 50px;
+        height: 26px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .menu_mobile-icon {
+        width: 50px;
+        height: 26px;
+        color: var(--white-color);
+    }
+
+    .right {
+        max-width: 200px;
         height: 30px;
     }
 
