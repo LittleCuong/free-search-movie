@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
-import {AiOutlineCaretUp, AiFillCaretDown} from 'react-icons/ai'
+import {AiOutlineCaretUp, AiFillCaretDown, AiOutlineMenu} from 'react-icons/ai'
+import grid from '~/assets/GridSystem/grid.css'
 
 import styles from './Header.module.scss';
 import Search from '../Search/Search';
@@ -10,6 +11,7 @@ import config from '~/config/config';
 
 
 const cx = classNames.bind(styles)
+
 
 function Header({className}) {
     const [background, setBackground] = useState(false)
@@ -26,28 +28,21 @@ function Header({className}) {
         }
     }  
 
-    const wrapper = cx('wrapper')
-    const wrapperWithBackground = cx('wrapper', 'show')
+    const wrapper = cx('wrapper', 'grid', 'row', 'col' )
+    const wrapperWithBackground = cx('wrapper', 'show', 'grid', 'row', 'col')
 
     return (
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
             <div className={cx('left')}>
-                <Link to={config.routes.home}>
-                    <img 
-                        src='https://scontent.fsgn5-5.fna.fbcdn.net/v/t1.15752-9/299271085_5479761142082361_3928683515544971155_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_ohc=bA2Td7Fs2oQAX-rt2Sj&_nc_ht=scontent.fsgn5-5.fna&oh=03_AVIjdOtlp0k4mzIuYBx2RrIHHN0xDDsYhbH_TAEmyhc-9A&oe=63245AEF' 
-                        alt='CNG'
-                        className={cx('logo')}
-                    />
-                </Link>
-                <ul className={cx('navbar_list-left', 'navbar-list')} >
+                <ul className={cx('navbar_list-left', 'navbar-list', 'hide-on-mobile')} >
                     <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                        <a href='/' className={cx('navbar_item-link')}>For You</a>
+                        <span  className={cx('navbar_item-link')}>For You</span>
                     </li>
                     <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                        <a href='/' className={cx('navbar_item-link')}>Top Rated</a>
+                        <span  className={cx('navbar_item-link')}>Top Rated</span>
                     </li>
                     <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                        <a href='/' className={cx('navbar_item-link')}>Watch Lists</a>
+                        <span  className={cx('navbar_item-link')}>Watch Lists</span>
                     </li>                   
                     <HeadlessTippy
                         interactive                       
@@ -57,19 +52,19 @@ function Header({className}) {
                             <>
                                 <div className={cx('subnav')} tabIndex="-1" {...attrs}>
                                     <div className={cx('subnav-item', 'first-subnav')}>
-                                        <a href='/'>Actors</a>                   
+                                        <span href='/'>Actors</span>                   
                                     </div>
                                     <div className={cx('subnav-item')}>
-                                        <a href='/'>Anime</a>
+                                        <span href='/'>Anime</span>
                                     </div>
                                     <div className={cx('subnav-item')}>
-                                        <a href='/'>TV Shows</a>
+                                        <span href='/'>TV Shows</span>
                                     </div>
                                     <div className={cx('subnav-item')}>
-                                        <a href='/'>Support</a>
+                                        <span href='/'>Support</span>
                                     </div>
                                     <div className={cx('subnav-item')}>
-                                        <a href='/'>Coming Soon</a>
+                                        <span href='/'>Coming Soon</span>
                                     </div>
                                 </div>
                                 <AiOutlineCaretUp className={cx('up-arrow')}/>
@@ -84,6 +79,9 @@ function Header({className}) {
                         </li>
                     </HeadlessTippy>
                 </ul>
+                <button className={cx('menu_mobile-btn')}>
+                    <AiOutlineMenu className={cx('menu_mobile-icon')}/>
+                </button>
             </div>
             <div className={cx('right')}>
                 <Search/>

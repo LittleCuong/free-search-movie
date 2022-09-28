@@ -68,7 +68,7 @@ function Billboard() {
     }
 
     return ( 
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', 'grid')}>
             <div ref={billboardRef} className={cx('billboard')}>
                 <img 
                     ref={posterRef}

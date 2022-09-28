@@ -1,14 +1,21 @@
 import { Fragment } from 'react';
 import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
-
 import MainLayout from "~/layouts/MainLayout/MainLayout";
 import { privateRoutes, publicRoutes } from '~/routes/routes.js';
+import grid from '~/assets/GridSystem/grid.css'
+
 
 function App() {
   return (
         // <HashRouter>
         <Router>
-            <div className="App" style={{overflow: "hidden"}}>
+            <div 
+                className="App grid" 
+                style={
+                    {
+                        overflow: "hidden",
+                    }
+                }>
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         let Layout = MainLayout;

@@ -4,6 +4,7 @@ import styles from './Search.module.scss'
 import HeadlessTippy from '@tippyjs/react/headless';
 import useDebounce from '~/hooks/useDebounce/useDebounce';
 import ItemResutls from '~/components/ItemResults/ItemResutls';
+import grid from '~/assets/GridSystem/grid.css'
 
 import {AiOutlineSearch, AiOutlineCloseCircle, AiOutlineLoading} from 'react-icons/ai'
 
