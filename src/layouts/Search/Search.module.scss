@@ -624,7 +624,7 @@
 @media (max-width: 739px) {
     .search {
         width: 260px;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .input {
@@ -660,7 +660,7 @@
     .search-result {
         position: absolute;
         top: -15px;
-        left: -305px;
+        left: -290px;
     }
 }
 
@@ -706,52 +706,54 @@
     .search-result {
         position: absolute;
         top: -15px;
-        left: -305px;
+        left: -205px;
+        width: 280px;
     }
 }
 
-@media (min-width: 301px) and (max-width: 370px){
-    .search {
-        width: 170px;
-        height: 30px;
-        margin: 0;
-    }
+// @media (min-width: 301px) and (max-width: 370px){
+//     .search {
+//         width: 170px;
+//         height: 30px;
+//         margin: 0;
+//     }
 
-    .input {
-        font-size: 1rem;
-        height: 26px;
-        margin-right: 10px;
-    }
+//     .input {
+//         font-size: 1rem;
+//         height: 26px;
+//         margin-right: 10px;
+//     }
 
-    .delete-icon {
-        top: 10px;
-        width: 10px;
-        height: 10px;
-    }
+//     .delete-icon {
+//         top: 10px;
+//         width: 10px;
+//         height: 10px;
+//     }
 
-    .loading-icon {
-        top: 10px;
-        width: 10px;
-        height: 10px;
-    }
+//     .loading-icon {
+//         top: 10px;
+//         width: 10px;
+//         height: 10px;
+//     }
     
-    .divider {
-        top: 8px;
-        right: 34px;
-        width: 0.8px;
-        height: 14px;
-    }
+//     .divider {
+//         top: 8px;
+//         right: 34px;
+//         width: 0.8px;
+//         height: 14px;
+//     }
 
-    .icon-search {
-        top: 7px;
-        right: 10px;
-        width: 20px;
-        height: 15px;
-    }
+//     .icon-search {
+//         top: 7px;
+//         right: 10px;
+//         width: 20px;
+//         height: 15px;
+//     }
 
-    .search-result {
-        position: absolute;
-        top: -15px;
-        left: -305px;
-    }
-}
+//     .search-result {
+//         width: 340px;
+//         position: absolute;
+//         top: -15px;
+//         left: -290px;
+//     }
+// }

@@ -64,7 +64,7 @@ function Search() {
                 visible={showResult && searchResult.length > 0}
                 onClickOutside={handleHideResult}
                 render={attrs => (                                    
-                    <div className={cx('search-result')} tabIndex="-1" {...attrs}>
+                    <div className={cx('search-result', 'grid')} tabIndex="-1" {...attrs}>
                         {searchResult?.map(item => (
                             <ItemResutls 
                                 key={item.id} 
