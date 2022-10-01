@@ -23,7 +23,7 @@ function MovieItem(props) {
                         <img  
                             className={cx('img')}                             
                             src={apiConfig.w500Image(item.poster_path)}
-                            alt="Propose"                         
+                            alt="movie"                         
                         />
                         <div className={cx('play')}>
                             <FaPlay className={cx('play-icon')}/>

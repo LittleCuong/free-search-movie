@@ -4,6 +4,7 @@ import styles from './Billboard.module.scss';
 import {FaGooglePlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa'
 import video from '~/assets/videos/transformer.mp4'
 import Videos from "../Videos/Videos";
+import Search from "~/layouts/Search/Search";
 
 const cx = classNames.bind(styles)
 
@@ -69,12 +70,6 @@ function Billboard() {
 
     return ( 
         <div className={cx('wrapper', 'grid')}>
-            <img 
-                ref={posterRef}
-                className={cx('billboard-main-poster')}     
-                src="https://wallpaperaccess.com/full/3031452.jpg"
-                alt="Video"
-            /> 
             <div ref={billboardRef} className={cx('billboard')}>
                 <img 
                     ref={posterRef}
@@ -138,7 +133,8 @@ function Billboard() {
             </div>
             {/* Mobile */}
             <div className={cx('billboard-content')}>
-
+                <h3 className={cx('billboard-content_header')}>Welcome to CNG Movie</h3>
+                <span className={cx('billboard-content_body')}>Explore now</span>
             </div>
         </div>
      );

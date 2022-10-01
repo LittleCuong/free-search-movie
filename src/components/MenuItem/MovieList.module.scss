@@ -27,7 +27,6 @@
 }
 
 .movie-container {
-    margin-left: 40px;
 }
 
 .movie-list::-webkit-scrollbar {
@@ -62,5 +61,11 @@
 
 // Responsive
 @media (max-width: 739px) {
+    .wrapper {
+        height: 310px;
+    }
 
+    .movie-container {
+        height: 240px;
+    }
 }

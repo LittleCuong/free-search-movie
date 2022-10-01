@@ -4,5 +4,10 @@
     color: #fff;
     font-weight: 600;
     background-color: #100F0F;
+}
 
+@media (max-width: 739px) {
+    .header {
+        font-size: 1.6rem;
+    }
 }

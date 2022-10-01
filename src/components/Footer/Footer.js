@@ -5,7 +5,7 @@ const cx = classNames.bind(styles)
 
 function Footer() {
     return ( 
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', 'grid')}>
             <div className={cx('information')}>
                 <div className={cx('information-col')}>
                     <span className={cx('information-item')}>FAQ</span>
