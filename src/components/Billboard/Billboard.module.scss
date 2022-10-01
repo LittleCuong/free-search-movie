@@ -1,9 +1,17 @@
 .wrapper {
-    // width: 1536px;
-    // height: 100%;
-    // width: 1536px;
+    position: relative;
     height: 860px;
     margin-top: -30px;
+    background-color: #333;
+}
+
+.billboard-content {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    display: none;        
+    width: 200px;
+    height: 200px;
     background-color: #333;
 }
 
@@ -11,6 +19,10 @@
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.billboard-main-poster {
+    display: none;
 }
 
 .billboard-trailer {
@@ -235,6 +247,7 @@
     }
 
     .billboard-infor {
+        top: 255px;
         height: 200px;
     }
 
@@ -284,104 +297,52 @@
     }
     
     .play-btn {
-        position: absolute;
+        top: 230px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .toggle-play {
+        top: 10px;
+        left: 10px;
+        font-size: 1.8rem;
+    }
+    
+    .pause-btn {
         top: 230px;
         left: -42px;
         width: 36px;
         height: 36px;
-        border-radius: 50%;
-        border: none;
-        background-color: #f2e2ec;
-    }
-    
-    .toggle-play {
-        position: absolute;
-        top: 13px;
-        left: 13px;
-        margin: 0 auto;
-        font-size: 2rem;
-        line-height: 4.6rem;
-        color: rgb(57, 57, 57);
-    }
-    
-    .pause-btn {
-        display: none;
-        position: absolute;
-        top: 230px;
-        left: -42px;
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        border: none;
-        background-color: #f2e2ec;
-    
-        &:hover {
-            cursor: pointer;
-            opacity: 0.8;
-        }
     }
     
     .toggle-pause {
-        position: absolute;
-        top: 13px;
-        left: 14px;
-        margin: 0 auto;
-        font-size: 2rem;
-        line-height: 4.6rem;
-        color: rgb(57, 57, 57);
+        top: 10px;
+        left: 10px;
+        font-size: 1.8rem;
     }
     
     .sound-btn {
-        position: absolute;
         top: 230px;
-        left: 30px;
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        border: none;
-        background-color: #f2e2ec;
-    
-        &:hover {
-            cursor: pointer;
-            opacity: 0.8;
-        }
+        width: 36px;
+        height: 36px;
     }
     
     .toggle-sound {
-        position: absolute;
-        top: 13px;
-        left: 14px;
-        margin: 0 auto;
-        font-size: 2rem;
-        line-height: 4.6rem;
-        color: rgb(57, 57, 57);
+        top: 10px;
+        left: 10px;
+        font-size: 1.8rem;
     }
     
     .sound-off-btn {
-        display: none;
-        position: absolute;
         top: 230px;
-        left: 30px;
-        width: 46px;
-        height: 46px;
-        border-radius: 50%;
-        border: none;
-        background-color: #f2e2ec;
-    
-        &:hover {
-            cursor: pointer;
-            opacity: 0.8;
-        }
+        width: 36px;
+        height: 36px;
     }
     
     .toggle-sound-off {
-        position: absolute;
-        top: 13px;
-        left: 14px;
-        margin: 0 auto;
-        font-size: 2rem;
-        line-height: 4.6rem;
-        color: rgb(57, 57, 57);
+        top: 10px;
+        left: 10px;
+        font-size: 1.8rem;
     }
 }
 
@@ -674,13 +635,6 @@
     }
 }
 
-    /* Tablet - PC low resolution */
-@media (min-width: 740px) and (max-width: 1023px) {
-    .wide {
-        width: 644px;
-    }
-}
-
     /* PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {   
     .wide {
@@ -846,10 +800,29 @@
     }
 }
 
+@media (max-width: 739px) {
+    .wrapper {
+        height: 360px;
+    }
 
-@media (max-width: 1023px) {
-    .course-item {
-        margin-top: 16px;
+    .billboard {
+        display: none;
+    }
+
+    .billboard-main-poster {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-top: 60px;
+    }
+
+    .billboard-content {
+        position: absolute;
+        display: block;
+        width: 300px;
+        height: 200px;
+        background-color: #333;
     }
 }
 

@@ -69,6 +69,12 @@ function Billboard() {
 
     return ( 
         <div className={cx('wrapper', 'grid')}>
+            <img 
+                ref={posterRef}
+                className={cx('billboard-main-poster')}     
+                src="https://wallpaperaccess.com/full/3031452.jpg"
+                alt="Video"
+            /> 
             <div ref={billboardRef} className={cx('billboard')}>
                 <img 
                     ref={posterRef}
@@ -87,7 +93,7 @@ function Billboard() {
                     >         
                     </video>
                     <div className={cx('billboard-infor')}>
-                        <h3 className={cx('movie-name')}>Transformers 5: The Last Knigth</h3>
+                        <h3 className={cx('movie-name')}>Transformers 5: The Last Knight</h3>
                         <div className={cx('infor')}>
                             <span className={cx('release')}>2017</span>
                             <span className={cx('divider')}></span>
@@ -128,8 +134,11 @@ function Billboard() {
                             <FaVolumeMute className={cx('toggle-sound-off')}/>
                         </button>
                     </div>
-                </div>
-                
+                </div>               
+            </div>
+            {/* Mobile */}
+            <div className={cx('billboard-content')}>
+
             </div>
         </div>
      );

@@ -1,6 +1,11 @@
 .wrapper {
     background-color: #100F0F;
     padding: 0 60px;
-    width: 1416px;
     height: 1500px;
+}
+
+@media (max-width: 739px) {
+    .wrapper {
+        padding-top: 50px;
+    }
 }

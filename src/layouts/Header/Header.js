@@ -38,10 +38,16 @@ function Header({className}) {
     const handleMenuMobile = () => {
         if (menuMobile === false) {
             setMenuMobile(true)
-            menuMobileRef.current.style.transform = 'translateX(0)'
+            Object.assign(menuMobileRef.current.style, {
+                transform: 'translateY(57%)',
+                opacity: 1
+            })
         } else {
             setMenuMobile(false)
-            menuMobileRef.current.style.transform = 'translateX(-100%)'
+            Object.assign(menuMobileRef.current.style, {
+                transform: 'translateY(-100%)',
+                opacity: 0
+            })
         }
     }
 
@@ -93,7 +99,7 @@ function Header({className}) {
                         </li>
                     </HeadlessTippy>
                 </ul>
-                    <HeadlessTippy
+                    {/* <HeadlessTippy
                         interactive       
                         // visible={menuMobile}  
                         visible             
@@ -126,19 +132,44 @@ function Header({className}) {
                                     </div>
                                 </div>
                             </>
-
                         )}
-                    >
-                        <button className={cx('menu_mobile-btn')} onClick={handleMenuMobile}>
+                    >                      
+                    </HeadlessTippy>                 */}
+                    <button className={cx('menu_mobile-btn')} onClick={handleMenuMobile}>
                             <AiOutlineMenu className={cx('menu_mobile-icon')}/>
-                        </button>
-                    </HeadlessTippy>                
+                    </button>
             </div>
             <div className={cx('right')}>
                 <Search/>
                 <Link to='/register' className={cx('register-button')}>
                     <span className={cx('register-text')}>Sign in</span>
                 </Link>
+            </div>
+            <div className={cx('menu-mobile', 'grid')} ref={menuMobileRef}>
+                <div className={cx('mobile-subnav-item', 'first-mobile-subnav')}>
+                    <span className={cx('mobile-navbar_item-link')}>For You</span>                                       
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Top Rated</span>           
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Watch Lists</span>                      
+                </div>
+                    <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Actors</span>                                     
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Anime</span>
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>TV Shows</span>
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Support</span>
+                </div>
+                <div className={cx('mobile-subnav-item')}>
+                    <span className={cx('mobile-navbar_item-link')}>Coming Soon</span>
+                </div>
             </div>
         </div> 
     );
