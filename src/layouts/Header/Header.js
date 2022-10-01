@@ -39,14 +39,12 @@ function Header({className}) {
         if (menuMobile === false) {
             setMenuMobile(true)
             Object.assign(menuMobileRef.current.style, {
-                transform: 'translateY(57%)',
-                opacity: 1
+                height: '200px',
             })
         } else {
             setMenuMobile(false)
             Object.assign(menuMobileRef.current.style, {
-                transform: 'translateY(-100%)',
-                opacity: 0
+                height: '0px',
             })
         }
     }

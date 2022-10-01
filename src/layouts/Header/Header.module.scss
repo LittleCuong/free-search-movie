@@ -821,11 +821,13 @@
 // Subnav
 .menu-mobile {
     position: absolute;
-    height: 200px;
+    top: 25px;
+    height: 0px;
     background-color: var(--black-color);
+    // display: none;
+    // background-color: #fff;
     transition: all 0.5s;
-    transform: translateY(-100%);
-    opacity: 0;
+    transform: translateY(0);
     overflow-y: auto;
     overflow-x: hidden;
 }
