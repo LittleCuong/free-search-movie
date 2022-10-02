@@ -2,13 +2,13 @@ import classNames from 'classnames/bind';
 import tmdApi, { category } from '~/api/tmdbApi';
 import { Link, useParams } from 'react-router-dom';
 import styles from './Movie.module.scss'
-import { useEffect } from 'react';
+import { memo } from 'react';
 
 const cx = classNames.bind(styles)
 const IMAGE_API = 'https://image.tmdb.org/t/p/w1280';
 
 function Movie({data}) {
-
+    console.log('render');
     const {category} = useParams()
 
     const link = '/movie' + '/' + data.id;
@@ -29,5 +29,4 @@ function Movie({data}) {
     );
 }
 
-export default Movie
-;
+export default memo(Movie);
