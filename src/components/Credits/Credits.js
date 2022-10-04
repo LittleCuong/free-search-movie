@@ -23,9 +23,9 @@ function Credits(props) {
 
 
     return ( 
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', 'grid')}>
             {casts.map((cast, i) => (
-                <div key={i} className={cx('cast-item')}>
+                <div key={i} className={cx('cast-item', 'l-2 m-2 c-2')}>
                     <img 
                         className={cx('cast-item--img')}
                         src={apiConfig.w500Image(cast.profile_path)}

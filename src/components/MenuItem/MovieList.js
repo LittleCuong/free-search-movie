@@ -32,6 +32,7 @@ function MovieList(props) {
             } else {
                 response = await tmdApi.similar(props.category, props.id)
             }
+
             setResults(response.results)
         }
         getPropose()
@@ -41,7 +42,7 @@ function MovieList(props) {
     const movieResutls = results.slice(0, 10)
 
     return ( 
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper',)}>
                 <HeaderMovie type={props.type}/>
                 <div className={cx('movie-list')}>
                     <div className={cx('movie-container')}>
@@ -54,8 +55,10 @@ function MovieList(props) {
                             />                   
                         ))}
                     </div>
-                </div>             
-                <MoreButton category={props.category} type={props.type}/>
+                </div>       
+                {props.type !== 'similar' ? (
+                    <MoreButton category={props.category} type={props.type} id={props.id}/>
+                ) : undefined}                    
         </div>
     );
 }

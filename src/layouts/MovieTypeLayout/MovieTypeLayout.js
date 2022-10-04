@@ -12,7 +12,7 @@ import HeadlessTippy from '@tippyjs/react/headless';
 
 const cx = classNames.bind(styles)
 
-function MovieTypeLayout() {
+function MovieTypeLayout(props) {
     window.scrollTo(0,0)
 
     // Variables 
@@ -28,15 +28,17 @@ function MovieTypeLayout() {
     const [totalPage, setTotalPage] = useState([])
 
     // useEffect
-    useEffect(() => {
-        const getMovies = async () => {
-            const params = {}
-            const response = await tmdApi.getMovieList(type, {params});
-            setMovies(response.results) 
-            setPage(response.page)
-            setTotalPage(response.total_pages)
-        }
-        getMovies()
+    useEffect(() => {       
+            const getMovies = async () => {
+                const params = {}
+                const response = await tmdApi.getMovieList(type, {params});
+                setMovies(response.results) 
+                setPage(response.page)
+                setTotalPage(response.total_pages)
+            }
+            getMovies()
+        
+
         const getGenres = async () => {
             const params = {}
             const res = await tmdApi.genres({params});
@@ -102,7 +104,7 @@ function MovieTypeLayout() {
             <Header className={cx('propose-header')}/>
             <div className={cx('grid')}>
                 <div className={cx('container', 'row no-gutters')}>
-                    <div className={cx('container-filters', 'col l-2 m-0 c-0')}>
+                    <div className={cx('container-filters', 'col l-2')}>
                         <h3 className={cx('container-header')}>{title}</h3>
                         <div className={cx('filter-sort')}>
                             <HeadlessTippy
@@ -131,9 +133,9 @@ function MovieTypeLayout() {
                                         <span>Sort results by</span>
                                         <FaAngleDown className={cx('angle-down')}/>
                                     </button>
-                                </HeadlessTippy>      
-                            </div>
-                            <div className={cx('filter-genre')}>
+                            </HeadlessTippy>      
+                        </div>
+                        <div className={cx('filter-genre')}>
                                 <HeadlessTippy
                                         interactive
                                         inertia={true}
@@ -158,7 +160,7 @@ function MovieTypeLayout() {
                                             <FaAngleDown className={cx('angle-down')}/>
                                         </button>
                                     </HeadlessTippy>
-                            </div>
+                        </div>
                     </div>
                     <div className={cx('movies-list', 'col')}>                                                                                  
                         {movies.map(movie => (

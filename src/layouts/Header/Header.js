@@ -97,45 +97,9 @@ function Header({className}) {
                         </li>
                     </HeadlessTippy>
                 </ul>
-                    {/* <HeadlessTippy
-                        interactive       
-                        // visible={menuMobile}  
-                        visible             
-                        render={attrs => (
-                            <>
-                                <div className={cx('mobile-subnav')} tabIndex="-1" {...attrs} ref={menuMobileRef}>
-                                    <div className={cx('mobile-subnav-item', 'first-mobile-subnav')}>
-                                        <span className={cx('mobile-navbar_item-link')}>For You</span>                                       
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Top Rated</span>           
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Watch Lists</span>                      
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Actors</span>                                     
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Anime</span>
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>TV Shows</span>
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Support</span>
-                                    </div>
-                                    <div className={cx('mobile-subnav-item')}>
-                                        <span className={cx('mobile-navbar_item-link')}>Coming Soon</span>
-                                    </div>
-                                </div>
-                            </>
-                        )}
-                    >                      
-                    </HeadlessTippy>                 */}
-                    <button className={cx('menu_mobile-btn')} onClick={handleMenuMobile}>
-                            <AiOutlineMenu className={cx('menu_mobile-icon')}/>
-                    </button>
+                <button className={cx('menu_mobile-btn')} onClick={handleMenuMobile}>
+                    <AiOutlineMenu className={cx('menu_mobile-icon')}/>
+                </button>
             </div>
             <div className={cx('right')}>
                 <Search/>

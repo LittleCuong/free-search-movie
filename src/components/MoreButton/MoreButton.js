@@ -3,13 +3,11 @@ import styles from './MoreButton.module.scss';
 import { Link } from "react-router-dom";
 import MoviesType from "~/pages/MoviesType";
 
-
+var moreLink = null
 const cx = classNames.bind(styles)
 
 function MoreButton(props) {
-    // const moreLink = '/' + props.category + '/' + props.type;
-    // const moreLink = '/movie/' + props.type
-    const moreLink = `/${props.type}`
+    moreLink = `/${props.type}`
 
     return ( 
         <Link to={moreLink}>
