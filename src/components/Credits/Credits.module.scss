@@ -35,6 +35,25 @@
 }
 
 // Responsive
+@media (max-width: 319px) {
+    .wrapper {
+        height: 120px;
+    }
+
+    .cast-item {
+        height: 100px;
+        margin-right: 6px;
+    }
+    
+    .cast-item--img {
+        height: 80px;
+    }
+
+    .cast-item--name {
+        font-size: .8rem;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 399px) {
     .wrapper {
         height: 140px;

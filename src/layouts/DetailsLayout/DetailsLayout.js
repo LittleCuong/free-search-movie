@@ -43,7 +43,7 @@ function DetailsLayout() {
                         >                      
                         </div>
                         <div className={cx('container', 'grid')}>
-                            <div className={cx('container-header', 'row')}>
+                            <div className={cx('container-header')}>
                                 <div className={cx('container-heading', 'row')}>
                                     <img
                                         className={cx('image')}
@@ -78,7 +78,7 @@ function DetailsLayout() {
                             <div className={cx('container-similar', 'row')}>
                                 <MovieList category={category} type={'similar'} id={movie.id}/>
                             </div>
-                        </div>
+                        </div>                      
                         <Footer/>                                  
                     </>
                 )

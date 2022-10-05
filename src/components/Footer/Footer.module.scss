@@ -34,13 +34,24 @@
 }
 
 // Responsive
+@media (max-width: 319px) {
+    .wrapper {
+        height: 200px;
+    }
+
+    .information-item {
+        width: 80px;
+        font-size: 0.8rem;
+    }    
+}
+
 @media (min-width: 740px) and (max-width: 1023px)  {
     .information-item {
         font-size: 1.6rem;
     }
 }
 
-@media (max-width: 739px) {
+@media (min-width: 400px) and (max-width: 739px) {
     .wrapper {
         height: 180px;
     }
