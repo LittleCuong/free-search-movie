@@ -22,6 +22,7 @@
     height: auto;
     background-color: #100F0F;
     padding-top: 24px;
+    padding-left: 4px;
     overflow-x: scroll;
     overflow-y: hidden;
 }
@@ -60,9 +61,10 @@
 }
 
 // Responsive
-@media (max-width: 739px) {
+@media (min-width: 400px) and (max-width: 739px) {
     .wrapper {
-        height: 310px;
+        width: 340px;
+        height: 300px;
     }
 
     .movie-container {
