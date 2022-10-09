@@ -37,7 +37,7 @@
     position: absolute;
     top: 50px;
     right: 0;
-    width: 300px;
+    width: 100%;
     height: calc(300px / 1.78);
     display: flex;
     justify-content: center;
@@ -55,9 +55,8 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: 240px;
+    padding: 10px 0;
+    width: 100%;    
     height: 40px;
 
     &:hover .name {
@@ -67,77 +66,61 @@
 }
 
 .name {
-    width: 240px;
+    width: 100%;
     font-size: 1.6rem;
     font-weight: 600;
     color: #F1F1F1;
 }
 
+
 @media (max-width: 319px) {
     .wrapper {
         width: 100px;
         height: 140px;
+        margin-right: 6px;
     }
 
     .image {
         width: 100px;
-        height: 140px;
+        height: 100px;
     }
     
     .img-link {
-        cursor: pointer;
         width: 100%;
         height: 100%;
-        transition: all 0.2s ease;
     }
     
-    .img {
-        border-radius: 8px;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-    }
     
     .play {
         position: absolute;
-        top: 50px;
+        top: 0px;
         right: 0;
-        width: 300px;
-        height: calc(300px / 1.78);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.2s ease;
+        width: 100px;
+        height: 100px;
     }
     
     .play-icon {
-        font-size: 5rem;
+        font-size: 2rem;
         color: #F1F1F1;
     }
     
     .content {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         width: 100px;
-        height: 40px;
+        height: 12px;
     }
     
     .name {
         width: 100px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
-@media (min-width: 340px) and (max-width: 739px) {
+@media (min-width: 320px) and (max-width: 399px) {
     .wrapper {
-        width: 200px;
-        height: 230px;
+        width: 130px;
+        height: 200px;
     }
     
     .image {
@@ -152,7 +135,7 @@
     
     .play {
         top: 10px;
-        width: 200px;
+        width: 130px;
     }
     
     .play-icon {
@@ -160,18 +143,85 @@
     }
     
     .content {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        margin: 0 auto;
-        padding-top: 12px;
-        padding-bottom: 12px;
-        width: 200px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
         height: 20px;
     }
     
     .name {
         width: 100%;       
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .wrapper {
+        width: 150px;
+        height: 200px;
+    }
+    
+    .image {
+        position: relative;
+        width: 100%;
+        height: 180px;
+    }
+    
+    .img {
+        border-radius: 4px;
+    }
+    
+    .play {
+        top: 10px;
+        width: 150px;
+    }
+    
+    .play-icon {
+        font-size: 3.3rem;
+    }
+    
+    .content {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
+        height: 20px;
+    }
+    
+    .name {
+        width: 100%;       
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        width: 185px;
+        height: 290px;
+    }
+
+    .image {
+        height: 210px;
+    }
+
+    .play {
+        top: 20px;
+        right: 0;
+        width: 100%;
+    }
+
+    .play-icon {
+        font-size: 4rem;
+    }
+
+    .content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 100%;
+        height: 20px;
+
+    }
+    
+    .name {
         font-size: 1.4rem;
     }
 }

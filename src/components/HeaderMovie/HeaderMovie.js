@@ -17,8 +17,6 @@ function HeaderMovie(props) {
         type = 'Similar'
     }
 
-
-
     return ( 
         <header className={cx('header')}>{type}</header>
     );

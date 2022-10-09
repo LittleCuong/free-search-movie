@@ -35,22 +35,22 @@ function DetailsLayout() {
         <>
             {
                 movie && (
-                    <>
+                    <div className={cx('wrapper', 'grid')}>
                         <Header/>
                         <div 
                             className={cx('banner')}
                             style={{backgroundImage: `url(${apiConfig.originalImage(movie.poster_path)})`}}
                         >                      
                         </div>
-                        <div className={cx('container', 'grid')}>
-                            <div className={cx('container-header')}>
-                                <div className={cx('container-heading', 'row')}>
+                        <div className={cx('container', 'grid wide')}>
+                            <div className={cx('container-header', 'row no-gutters')}>
+                                <div className={cx('container-heading')}>
                                     <img
-                                        className={cx('image')}
+                                        className={cx('image', 'col l-3 m-3')}
                                         src={apiConfig.w500Image(movie.poster_path)}
                                         alt={movie.title}
                                     />
-                                    <div className={cx('movie-information')}>
+                                    <div className={cx('movie-information', 'col l-9 m-9')}>
                                         <h3 className={cx('movie-name')}>{movie.title}</h3>
                                         <div className={cx('movie-genres')}>
                                         {movie.genres && movie.genres.map((genre, index) => (
@@ -80,7 +80,7 @@ function DetailsLayout() {
                             </div>
                         </div>                      
                         <Footer/>                                  
-                    </>
+                    </div>
                 )
             }
         </>

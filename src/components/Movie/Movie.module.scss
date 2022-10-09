@@ -1,14 +1,17 @@
 .wrapper {
-    margin: 12px 5px 0 5px;
+    margin-top: 12px;
     width: 230px;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    background-color: #f1f1f1;
+    // background-color: #f1f1f1;
 }    
 
 .image-card {
     width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
     height: 310px;
 }
 
@@ -24,13 +27,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #f1f1f1;
 }
 
 .movie-name {
-    display: inline;
-    width: 100%;
     color: #100F0F;
+    font-size: 1.4rem;
 
     &:hover {
         cursor: pointer;
@@ -38,3 +42,62 @@
     }
 }
 
+@media (max-width: 319px) {
+    .wrapper {
+        margin-top: 10px;
+        height: 200px;
+    }
+
+    .image-card {
+        height: 160px;
+    }
+
+    .movie-infor {
+        height: 30px;
+    }
+
+    .movie-name {
+        font-size: 0.8rem;
+    }    
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+    .wrapper {
+        margin-top: 10px;
+        height: 240px;
+    }
+
+    .image-card {
+        height: 200px;
+    }
+
+    .movie-name {
+        font-size: 0.8rem;
+    }    
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .wrapper {
+        margin-top: 10px;
+        height: 280px;
+    }
+
+    .image-card {
+        height: 240px;
+    }
+
+    .movie-name {
+        font-size: 1.2rem;
+    } 
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        margin-top: 10px;
+        height: 300px;
+    }
+
+    .image-card {
+        height: 260px;
+    }
+}

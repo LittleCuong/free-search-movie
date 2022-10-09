@@ -1,3 +1,7 @@
+.wrapper {
+    background-color: #100720;
+}
+
 .banner {
     width: 100%;
     height: 400px;
@@ -31,8 +35,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 1500px;
     background-color: #100720;
 }
 
@@ -125,131 +127,17 @@
     justify-content: center;
 }
 
-.container-similar {
-    width: 1416px;
-    height: 400px;
-}
+// .container-similar {
+//     width: 1416px;
+//     height: 400px;
+// }
 
 // Responsive
 @media (max-width: 319px) {
     .banner {
-        height: 200px;
+        height: 250px;
     }
 
-    .container {
-        height: 680px;
-    }
-
-    .container-header {
-        height: 0px;
-    }
-
-    .container-heading {
-        top: -100px;
-        margin: 0;
-    }
-
-    .image {
-        width: 100px;
-        height: 140px;
-        margin: 0;
-    }
-
-    .movie-information {
-        width: 100%;
-        margin: 0;
-    }
-
-    .movie-name {
-        font-size: 1.2rem;
-    }
-
-    .genres {
-        height: 6px;
-        line-height: 0.6rem;
-        font-size: 0.6rem;
-    }
-
-    .movie-overview {
-        font-size: 0.6rem;
-    }
-
-    .movie-casts {
-        height: 120px;
-    }
-
-    .movie-casts > h3 {
-        font-size: 1rem;
-    }
-
-    .container-body {
-        margin-top: 100px;
-        margin-bottom: 10px;
-        width: 200px;
-        height: 160px;
-    }
-    
-    .container-similar {
-        width: 200px;
-        height: 100px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 399px) {
-    .container {
-        height: 850px;
-    }
-
-    .container-header {
-        height: 30px;
-    }
-
-    .image {
-        width: 200px;
-        height: 240px;
-        margin: 0;
-    }
-
-    .movie-information {
-        width: 100%;
-    }
-
-    .movie-name {
-        font-size: 1.4rem;
-    }
-
-    .genres {
-        height: 10px;
-        line-height: 1rem;
-        font-size: 1rem;
-    }
-
-    .movie-overview {
-        font-size: 0.8rem;
-    }
-
-    .movie-casts {
-        height: 140px;
-    }
-
-    .movie-casts > h3 {
-        font-size: 1.2rem;
-    }
-
-    .container-body {
-        margin-top: 175px;
-        margin-bottom: 10px;
-        width: 300px;
-        height: 200px;
-    }
-    
-    .container-similar {
-        width: 300px;
-        height: 200px;
-    }
-}
-
-@media (min-width: 400px) and (max-width: 739px) {
     .container {
         height: 1110px;
     }
@@ -258,9 +146,77 @@
         height: 370px;
     }
 
+    .container-heading {
+        top: -130px;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .image {
-        width: 200px;
-        height: 250px;
+        width: 140px;
+        height: 180px;
+        margin: 0;
+    }
+
+    .movie-information {
+        width: 100%;
+        margin: 0;
+    }
+
+    .movie-name {
+        font-size: 1.4rem;
+    }
+
+    .genres {
+        height: 30px;
+        line-height: 3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 2px 8px 2px 8px;
+        margin-right: 10px;
+    }
+
+    .movie-overview {
+        font-size: 1rem;
+    }
+
+    .movie-casts {
+        height: 160px;
+    }
+
+    .movie-casts > h3 {
+        font-size: 1rem;
+    }
+
+    .container-body {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        width: 340px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+    .banner {
+        height: 300px;
+    }
+
+    .container {
+        height: 1110px;
+    }
+
+    .container-header {
+        height: 370px;
+    }
+
+    .container-heading {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .image {
+        width: 160px;
+        height: 210px;
         margin: 0;
     }
 
@@ -269,7 +225,7 @@
     }
 
     .movie-name {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     .genres {
@@ -281,12 +237,16 @@
         margin-right: 10px;
     }
 
+    .movie-overview {
+        font-size: 1.2rem;
+    }
+
     .movie-casts {
-        height: 170px;
+        height: 160px;
     }
 
     .movie-casts > h3 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .container-body {
@@ -295,8 +255,64 @@
         width: 340px;
         height: 300px;
     }
-    
-    .container-similar {
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .banner {
+        height: 340px;
+    }
+
+    .container {
+        height: 1110px;
+    }
+
+    .container-header {
+        height: 370px;
+    }
+
+    .container-heading {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .image {
+        width: 200px;
+        height: 260px;
+        margin: 0;
+    }
+
+    .movie-information {
+        width: 100%;
+    }
+
+    .movie-name {
+        font-size: 1.8rem;
+    }
+
+    .genres {
+        height: 30px;
+        line-height: 3rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 4px 10px 4px 10px;
+        margin-right: 10px;
+    }
+
+    .movie-overview {
+        font-size: 1.4rem;
+    }
+
+    .movie-casts {
+        height: 160px;
+    }
+
+    .movie-casts > h3 {
+        font-size: 1.2rem;
+    }
+
+    .container-body {
+        margin-top: 60px;
+        margin-bottom: 20px;
         width: 340px;
         height: 300px;
     }
@@ -304,34 +320,33 @@
 
 @media (min-width: 740px) and (max-width: 1023px) {
     .container {
-        height: 1400px;
+        height: 1000px;
     }
 
     .image {
-        width: 200px;
-        height: 300px;
-        margin: 0;
-    }
-
-    .container-header {
-        left: 8px;
+        height: 250px;
+        margin-left: 0;
     }
 
     .container-heading {
-        left: 8px;
-     }
- 
+        height: 420px;
+    }
+
+    .container-header {
+        height: 0;
+
+    }
+
     .movie-information {
-        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 0;
-        padding-left: 10px;
+        margin-left: 10px;
     }
 
     .movie-name {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .genres {
@@ -352,24 +367,23 @@
     }
 
     .movie-casts > h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .container-body {
         margin-top: 200px;
-        width: 700px;
+        width: 644px;
         height: 400px;
     }
-    
+
     .container-similar {
-        width: 700px;
-        height: 400px;
+        width: 644px;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1298px) {
     .container {
-        height: 1120px;
+        height: 1270px;
     }
 
     .image {
@@ -404,15 +418,9 @@
     }
 
     .container-body {
-        margin-top: 20px;
+        margin-top: 100px;
         margin-bottom: 40px;
-        width: 800px;
-        height: 400px;
-    }
-    
-    .container-similar {
-        width: 700px;
-        height: 400px;
-        margin-bottom: 40px;
+        width: 984px;
+        height: 500px;
     }
 }

@@ -14,7 +14,7 @@ function Movie({data}) {
     const link = '/movie' + '/' + data.id;
 
     return ( 
-        <Link to={link} className={cx('wrapper')}>
+        <Link to={link} className={cx('wrapper', 'col l-2 m-4 c-4')}>
             <div className={cx('image-card')}>
                 <img 
                     className={cx('image')}

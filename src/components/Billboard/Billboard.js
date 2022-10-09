@@ -131,6 +131,7 @@ function Billboard() {
                     </div>
                 </div>               
             </div>
+
             {/* Mobile */}
             <div className={cx('billboard-content')}>
                 <h3 className={cx('billboard-content_header')}>Welcome to CNG Movie</h3>

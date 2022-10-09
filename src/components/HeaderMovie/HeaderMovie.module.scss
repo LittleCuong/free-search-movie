@@ -6,7 +6,21 @@
     background-color: #100F0F;
 }
 
-@media (max-width: 739px) {
+@media (max-width: 319px) {
+    .header {
+        padding: 10px 0 0 10px;
+        width: 200px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 739px) {
+    .header {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
     .header {
         font-size: 1.6rem;
     }

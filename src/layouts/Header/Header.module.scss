@@ -21,19 +21,11 @@
 }
 
 .left {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .right {
-    margin-right: 10px;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-    cursor: pointer;
+    margin-right: 20px;
 }
 
 .navbar_list-left,
@@ -245,267 +237,6 @@
     color: var(--white-color);
 }
 
-// responsive 
-    /* Tablet */
-@media (min-width: 740px) and (max-width: 1023px)  {
-    .wide {
-        width: 644px;
-    }   
-
-    .hide-on-tablet {
-        display: none;
-    }
-
-    .wrapper {
-        height: 40px;
-    }
-
-    .left {
-        max-width: 300px;
-        height: 40px;
-    }
-
-    .right {
-        max-width: 300px;
-        height: 40px;
-    }
-
-    .navbar_item-link {
-        font-size: 1rem;
-    }
-
-    .down-icon {
-        top: -1px;
-    }
-
-    .register-button {
-        height: 30px;
-    }
-
-    .register-text {
-        line-height: 3rem;
-        font-size: 1.2rem;
-    }
-}
-
-    /* PC low resolution */
-@media (min-width: 1024px) and (max-width: 1239px) {   
-    .wide {
-        width: 984px;
-    }
-
-    .wide.row {
-        margin-left: -12px;
-        margin-right: -12px;
-    }
-
-    .wide {
-        width: 984px;
-    }
-
-    .wide .row {
-        margin-left: -12px;
-        margin-right: -12px;
-    }
-
-    .wide .row.sm-gutter {
-        margin-left: -5px;
-        margin-right: -5px;
-    }
-
-    .wide .col {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .wide .row.sm-gutter .col {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .wide .l-0 {
-        display: none;
-    }
-
-    .wide .l-1,
-    .wide .l-2,
-    .wide .l-2-4,
-    .wide .l-3,
-    .wide .l-4,
-    .wide .l-5,
-    .wide .l-6,
-    .wide .l-7,
-    .wide .l-8,
-    .wide .l-9,
-    .wide .l-10,
-    .wide .l-11,
-    .wide .l-12 {
-        display: block;
-    }
-
-    .wide .l-1 {
-        flex: 0 0 8.33333%;
-        max-width: 8.33333%;
-    }
-
-    .wide .l-2 {
-        flex: 0 0 16.66667%;
-        max-width: 16.66667%;
-    }
-
-    .wide .l-2-4 {
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-
-    .wide .l-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-
-    .wide .l-4 {
-        flex: 0 0 33.33333%;
-        max-width: 33.33333%;
-    }
-
-    .wide .l-5 {
-        flex: 0 0 41.66667%;
-        max-width: 41.66667%;
-    }
-
-    .wide .l-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
-    .wide .l-7 {
-        flex: 0 0 58.33333%;
-        max-width: 58.33333%;
-    }
-
-    .wide .l-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
-    }
-
-    .wide .l-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-
-    .wide .l-10 {
-        flex: 0 0 83.33333%;
-        max-width: 83.33333%;
-    }
-
-    .wide .l-11 {
-        flex: 0 0 91.66667%;
-        max-width: 91.66667%;
-    }
-
-    .wide .l-12 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .wide .l-o-1 {
-        margin-left: 8.33333%;
-    }
-
-    .wide .l-o-2 {
-        margin-left: 16.66667%;
-    }
-
-    .wide .l-o-3 {
-        margin-left: 25%;
-    }
-
-    .wide .l-o-4 {
-        margin-left: 33.33333%;
-    }
-
-    .wide .l-o-5 {
-        margin-left: 41.66667%;
-    }
-
-    .wide .l-o-6 {
-        margin-left: 50%;
-    }
-
-    .wide .l-o-7 {
-        margin-left: 58.33333%;
-    }
-
-    .wide .l-o-8 {
-        margin-left: 66.66667%;
-    }
-
-    .wide .l-o-9 {
-        margin-left: 75%;
-    }
-
-    .wide .l-o-10 {
-        margin-left: 83.33333%;
-    }
-
-    .wide .l-o-11 {
-        margin-left: 91.66667%;
-    }
-}
-
-@media (max-width: 739px) {
-    .wide {
-        width: 644px;
-    }   
-
-    .hide-on-mobile {
-        display: none;
-    }
-
-    .wrapper {
-        height: 30px;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--black-color);
-    }
-
-    .left {
-        max-width: 200px;
-        height: 30px;
-    }
-
-    .menu_mobile-btn {
-        display: block;
-        width: 40px;
-        height: 26px;
-        border: none;
-        background-color: transparent;
-        margin-right: 10px;
-    }
-
-    .menu_mobile-icon {
-        width: 25px;
-        height: 26px;
-        color: var(--white-color);
-    }
-
-    .right {
-        max-width: 600px;
-        height: 30px;
-    }
-
-    .register-button {
-        width: 50px;
-        height: 26px;
-        margin-right: 10px;
-    }
-
-    .register-text {
-        line-height: 2.6rem;
-        font-size: 1rem;
-    }
-}
-
 // Subnav
 .menu-mobile {
     position: absolute;
@@ -547,7 +278,6 @@
         background-color: rgba(255, 255, 255, 0.1);
     }
     text-align: left;
-
 }
 
 .mobile-navbar_item-link {
@@ -555,3 +285,205 @@
     color: #fff;
     font-weight: 500;
 }
+
+// responsive 
+@media (max-width: 319px) {  
+    .wrapper {
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--black-color);
+    }
+
+    .left {
+        max-width: 100px;
+        height: 30px;
+    }
+
+    .navbar_list-left {
+        display: none;
+    }
+
+    .menu_mobile-btn {
+        display: block;
+        width: 40px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        margin-right: 10px;
+    }
+
+    .menu_mobile-icon {
+        width: 25px;
+        height: 20px;
+        color: var(--white-color);
+    }
+
+    .mobile-subnav-item {
+        height: 26px;
+    }
+
+    .mobile-navbar_item-link {
+        font-size: 1.2rem;
+    }
+
+    .right {
+        max-width: 200px;
+        height: 30px;
+    }
+
+    .register-button {
+        width: 50px;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+    .register-text {
+        line-height: 2.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 399px) {  
+    .wrapper {
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--black-color);
+    }
+
+    .left {
+        max-width: 100px;
+        height: 30px;
+    }
+
+    .navbar_list-left {
+        display: none;
+    }
+
+    .menu_mobile-btn {
+        display: block;
+        width: 40px;
+        height: 20px;
+        border: none;
+        background-color: transparent;
+        margin-right: 10px;
+    }
+
+    .menu_mobile-icon {
+        width: 25px;
+        height: 20px;
+        color: var(--white-color);
+    }
+
+    .right {
+        max-width: 260px;
+        height: 30px;
+    }
+
+    .register-button {
+        width: 50px;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+    .register-text {
+        line-height: 2.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 739px) {  
+    .wrapper {
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--black-color);
+    }
+
+    .left {
+        max-width: 100px;
+        height: 30px;
+    }
+
+    .navbar_list-left {
+        display: none;
+    }
+
+    .menu_mobile-btn {
+        display: block;
+        width: 40px;
+        height: 26px;
+        border: none;
+        background-color: transparent;
+        margin-right: 10px;
+    }
+
+    .menu_mobile-icon {
+        width: 25px;
+        height: 26px;
+        color: var(--white-color);
+    }
+
+    .right {
+        max-width: 600px;
+        height: 30px;
+    }
+
+    .register-button {
+        width: 50px;
+        height: 26px;
+        margin-right: 10px;
+    }
+
+    .register-text {
+        line-height: 2.6rem;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px)  {
+    .wide {
+        width: 644px;
+    }   
+
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .wrapper {
+        height: 40px;
+    }
+
+    .left {
+        max-width: 300px;
+        height: 40px;
+    }
+
+    .right {
+        max-width: 300px;
+        height: 40px;
+    }
+
+    .navbar_item-link {
+        font-size: 1rem;
+    }
+
+    .down-icon {
+        top: -1px;
+    }
+
+    .register-button {
+        height: 30px;
+    }
+
+    .register-text {
+        line-height: 3rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1239px) {   
+    
+}
+

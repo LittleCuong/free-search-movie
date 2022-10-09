@@ -1,11 +1,33 @@
 .wrapper {
     background-color: #100F0F;
-    padding: 0 60px;
-    height: 980px;
+    height: 1230px;
 }
 
-@media (max-width: 739px) {
+.container {
+    width: 100%;
+}
+
+@media (max-width: 319px) {
     .wrapper {
-        padding-top: 50px;
+        height: 600px;
     }
 }
+
+@media (min-width: 320px) and (max-width: 399px) {
+    .wrapper {
+        height: 860px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 739px) {
+    .wrapper {
+        height: 900px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper {
+        height: 1180px;
+    }
+}
+

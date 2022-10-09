@@ -42,7 +42,7 @@ function MovieList(props) {
     const movieResutls = results.slice(0, 10)
 
     return ( 
-        <div className={cx('wrapper',)}>
+        <div className={cx('wrapper', 'grid wide')}>
                 <HeaderMovie type={props.type}/>
                 <div className={cx('movie-list')}>
                     <div className={cx('movie-container')}>

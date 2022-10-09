@@ -337,12 +337,11 @@ a {
     }
 }
 
-
     /* PC low rel > */
 @media (min-width: 1113px) {
     .row {
-        margin-left: -12x;
-        margin-right: -12x;
+        margin-left: -12px;
+        margin-right: -12px;
     }
 
     .hide-on-pc-lowRel {
@@ -666,12 +665,6 @@ a {
     }
 }
 
-
-@media (max-width: 1023px) {
-    .course-item {
-        margin-top: 16px;
-    }
-}
 
 
 
