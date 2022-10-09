@@ -36,6 +36,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #100720;
+    height: 1460px;
 }
 
 // Container-header
@@ -72,14 +73,17 @@
 .movie-name {
     margin-top: 4px;
     margin-bottom: 0;
-    font-size: 4rem;
+    font-size: 3.3rem;
     color: #fff;
     cursor: pointer;
+    height: 60px;
+    overflow: hidden;
 }
 
 .movie-genres {
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .genres {
@@ -101,6 +105,9 @@
 }
 
 .movie-overview {
+    display: block;
+    height: 100px;
+    overflow: hidden;
     font-size: 1.6rem;
     color: #fff;
 }
@@ -127,11 +134,6 @@
     justify-content: center;
 }
 
-// .container-similar {
-//     width: 1416px;
-//     height: 400px;
-// }
-
 // Responsive
 @media (max-width: 319px) {
     .banner {
@@ -139,7 +141,7 @@
     }
 
     .container {
-        height: 1110px;
+        height: 800px;
     }
 
     .container-header {
@@ -170,13 +172,16 @@
     .genres {
         height: 30px;
         line-height: 3rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 600;
-        padding: 2px 8px 2px 8px;
+        padding: 2px 4px 2px 4px;
         margin-right: 10px;
     }
 
     .movie-overview {
+        display: block;
+        height: 140px;
+        overflow: hidden;
         font-size: 1rem;
     }
 
@@ -191,8 +196,8 @@
     .container-body {
         margin-top: 60px;
         margin-bottom: 20px;
-        width: 340px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -210,6 +215,7 @@
     }
 
     .container-heading {
+        top: -130px;
         align-items: center;
         flex-direction: column;
     }
@@ -222,6 +228,7 @@
 
     .movie-information {
         width: 100%;
+        margin: 0;
     }
 
     .movie-name {
@@ -238,6 +245,8 @@
     }
 
     .movie-overview {
+        height: 150px;
+        overflow: hidden;
         font-size: 1.2rem;
     }
 
@@ -252,7 +261,7 @@
     .container-body {
         margin-top: 60px;
         margin-bottom: 20px;
-        width: 340px;
+        width: 300px;
         height: 300px;
     }
 }
@@ -299,6 +308,8 @@
     }
 
     .movie-overview {
+        height: 150px;
+        overflow: hidden;
         font-size: 1.4rem;
     }
 
@@ -313,7 +324,7 @@
     .container-body {
         margin-top: 60px;
         margin-bottom: 20px;
-        width: 340px;
+        width: 300px;
         height: 300px;
     }
 }

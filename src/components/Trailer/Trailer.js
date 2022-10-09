@@ -30,7 +30,7 @@ function Trailer(props) {
     return ( 
         <div className={cx('wrapper')}>
             <iframe
-                className={cx('iframe', 'col l-12 m-12 c-12')}
+                className={cx('iframe', 'col l-12 m-12')}
                 src={`https://www.youtube-nocookie.com/embed/${key}`}
                 title="video"
                 allowFullScreen

@@ -62,9 +62,9 @@ function DetailsLayout() {
                                                 </span>
                                         ))}
                                         </div>
-                                        <p className={cx('movie-overview')}>
+                                        <span className={cx('movie-overview')}>
                                             {movie.overview}
-                                        </p>
+                                        </span>
                                         <div className={cx('movie-casts')}>
                                             <h3>Casts</h3>
                                             <Credits data={movie.id}/>
