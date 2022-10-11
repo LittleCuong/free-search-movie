@@ -253,6 +253,10 @@
         height: 200px;
     }
 
+    .container_movie-header--movie_wrapper {
+        margin-left: 0;
+    }
+
     .movie_name {
         font-size: 2rem;
     }
@@ -296,7 +300,7 @@
     }
 
     .container_movie-header {
-        height: 420px;
+        height: 360px;
     }
 
     .container_movie-header--image {

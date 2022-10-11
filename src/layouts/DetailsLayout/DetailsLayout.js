@@ -73,6 +73,7 @@ function DetailsLayout() {
                                 <div className={cx('container_movie-body', 'row')}>
                                     <Trailer data={movie.id}/> 
                                 </div>
+                                <MovieList category={category} type={'similar'} id={movie.id}/>
                             </div>
                         </div>
                         <Footer/>                                  
