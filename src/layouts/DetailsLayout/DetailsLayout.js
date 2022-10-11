@@ -37,48 +37,44 @@ function DetailsLayout() {
                 movie && (
                     <div className={cx('wrapper', 'grid')}>
                         <Header/>
-                        <div 
-                            className={cx('banner')}
-                            style={{backgroundImage: `url(${apiConfig.originalImage(movie.poster_path)})`}}
-                        >                      
-                        </div>
-                        <div className={cx('container', 'grid wide')}>
-                            <div className={cx('container-header', 'row no-gutters')}>
-                                <div className={cx('container-heading')}>
+                        <div className={cx('container_banner')} style={{backgroundImage: `url(${apiConfig.originalImage(movie.poster_path)})`}}>
+                            </div>
+                        <div className={cx('container')}>
+                            <div className={cx('container_movie', 'grid wide')}>
+                                <div className={cx('container_movie-header', 'row no-gutters')}>
                                     <img
-                                        className={cx('image', 'col l-3 m-3')}
+                                        className={cx('container_movie-header--image', 'col l-3 m-3')}
                                         src={apiConfig.w500Image(movie.poster_path)}
                                         alt={movie.title}
                                     />
-                                    <div className={cx('movie-information', 'col l-9 m-9')}>
-                                        <h3 className={cx('movie-name')}>{movie.title}</h3>
-                                        <div className={cx('movie-genres')}>
-                                        {movie.genres && movie.genres.map((genre, index) => (
-                                                <span 
-                                                    className={cx('genres')}
-                                                    key={index} 
-                                                >
-                                                    {genre.name}
-                                                </span>
-                                        ))}
-                                        </div>
-                                        <span className={cx('movie-overview')}>
-                                            {movie.overview}
-                                        </span>
-                                        <div className={cx('movie-casts')}>
-                                            <h3>Casts</h3>
-                                            <Credits data={movie.id}/>
+                                    <div className={cx('container_movie-header--movie', 'col l-9 m-9')}>
+                                        <div className={cx('container_movie-header--movie_wrapper')}>
+                                            <h3 className={cx('movie_name')}>{movie.title}</h3>
+                                            <div className={cx('movie_genres')}>
+                                                {movie.genres && movie.genres.map((genre, index) => (
+                                                    <span 
+                                                        className={cx('genres')}
+                                                        key={index} 
+                                                    >
+                                                        {genre.name}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                            <span className={cx('movies_overview')}>
+                                                {movie.overview}
+                                            </span>
+                                            <div className={cx('movie_credit')}>
+                                                <h4>Cast</h4>
+                                                <Credits data={movie.id}/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div className={cx('container_movie-body', 'row')}>
+                                    <Trailer data={movie.id}/> 
+                                </div>
                             </div>
-                            <div className={cx('container-body', 'row')}>
-                                <Trailer data={movie.id}/>            
-                            </div>
-                            <div className={cx('container-similar', 'row')}>
-                                <MovieList category={category} type={'similar'} id={movie.id}/>
-                            </div>
-                        </div>                      
+                        </div>
                         <Footer/>                                  
                     </div>
                 )
@@ -87,4 +83,32 @@ function DetailsLayout() {
     );
 }
 
+
+{/*
+    <div 
+        className={cx('banner')}
+        style={{backgroundImage: `url(${apiConfig.originalImage(movie.poster_path)})`}}
+    </div>
+
+    <img
+        className={cx('image', 'col l-3 m-3')}
+        src={apiConfig.w500Image(movie.poster_path)}
+        alt={movie.title}
+    />
+
+    {movie.genres && movie.genres.map((genre, index) => (
+        <span 
+            className={cx('genres')}
+            key={index} 
+        >
+            {genre.name}
+        </span>
+    ))}
+
+    <Credits data={movie.id}/>
+    
+    <Trailer data={movie.id}/>            
+
+    <MovieList category={category} type={'similar'} id={movie.id}/>
+>   */}
 export default DetailsLayout;

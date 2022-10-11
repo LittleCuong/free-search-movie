@@ -291,6 +291,10 @@
     }
 }
 
+@media (min-width: 400) and (max-width: 559px) {
+    
+}
+
 @media (min-width: 560px) and (max-width: 739px) {
     .wide {
         width: 552px;
