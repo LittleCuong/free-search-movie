@@ -254,6 +254,7 @@
     }
 
     .container_movie-header--movie_wrapper {
+        width: 300px;
         margin-left: 0;
     }
 
@@ -263,6 +264,8 @@
 
     .movie_genres {
         height: 20px;
+        width: 270px;
+        overflow: hidden;
         margin-bottom: 10px;
     }
     
@@ -277,8 +280,8 @@
     
     .movies_overview {
         display: block;
-        height: 110px;
-        overflow: hidden;
+        max-height: 80px;
+        overflow: auto;
         text-overflow: ellipsis;
         font-size: 1rem;
     }
@@ -300,6 +303,7 @@
     }
 
     .container_movie-header {
+        // width: 300px;
         height: 360px;
     }
 
@@ -334,8 +338,7 @@
     .movies_overview {
         display: block;
         height: 110px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: auto;
         font-size: 1.2rem;
     }
     
@@ -383,8 +386,7 @@
     .movies_overview {
         display: block;
         height: 120px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        overflow: auto;
         color: var(--white-color);
         font-size: 1.4rem;
     }
