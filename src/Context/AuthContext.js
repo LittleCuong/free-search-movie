@@ -1,3 +1,4 @@
+import { GoogleAuthProvider, signInWithPopup, getAuth, FacebookAuthProvider  } from "firebase/auth";
 import React, { useContext, useEffect, useState } from "react";
 import { auth } from "../firebase.js";
 
@@ -15,12 +16,26 @@ function AuthProvider({ children }) {
 
     // Auth module to sign in a user
     function signup(email, password) {
-        auth.createUserWithEmailAndPassword(email, password)
+        return auth.createUserWithEmailAndPassword(email, password)
     }
 
     // Auth module to log in a user
     function login(email, password) {
-        auth.signInWithEmailAndPassword(email, password)
+        return auth.signInWithEmailAndPassword(email, password)
+    }
+
+    function logout() {
+        return auth.signOut()
+    }
+
+    function signInWithGoogle() {
+        const provider = new GoogleAuthProvider();
+        auth.signInWithPopup(provider)
+    }
+
+    function signInWithFacebook() {
+        const provider = new FacebookAuthProvider();
+        auth.signInWithPopup(provider)
     }
 
     useEffect(() => {
@@ -36,7 +51,10 @@ function AuthProvider({ children }) {
     const value = {
         currentUser,
         signup,
+        signInWithGoogle,
+        signInWithFacebook,
         login,
+        logout
     }
 
     return ( 

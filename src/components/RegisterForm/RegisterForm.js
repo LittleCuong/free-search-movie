@@ -1,39 +1,54 @@
 import classNames from "classnames/bind";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { FaGoogle, FaFacebookF } from "react-icons/fa";
 import styles from './RegisterForm.module.scss'
-import AuthProvider, { useAuth } from "~/Context/AuthContext";
+import { useAuth } from "~/Context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
+
 
 const cx = classNames.bind(styles)
 
 function RegisterForm({className}) {
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
-    const { signup } = useAuth()
+    const { signInWithGoogle, signInWithFacebook, currentUser } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const navigate = useNavigate()
 
-    async function handleSubmit(e) {
+    const handleGoogle = async (e) => {
         e.preventDefault()
-
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Password do not match')
-        }
 
         try {
             // setError tro lai ban dau
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await signInWithGoogle()
         } catch {
             setError('Faile to sign up')
         }
 
         setLoading(false)
     }
-  
+
+    const handleFacebook = async (e) => {
+        e.preventDefault()
+
+        try {
+            setError('')
+            setLoading(true)
+            await signInWithFacebook()
+        } catch {
+            setError('Faile to sign up')
+        }
+
+        setLoading(false)
+    }
+
+    useEffect(() => {
+        if (currentUser != null) {
+            navigate('/cng-movie')
+        }
+    }, [currentUser, navigate])
+
     const classes = cx('wrapper',{
         // Khi có className thì lấy data của className truyền vào [className] làm key
         [className]: className
@@ -43,42 +58,29 @@ function RegisterForm({className}) {
         <div className={classes}>
             <h3 className={cx('modal-header')}>Sign Up</h3>
             {error && <h3>{error}</h3>}
-            <form className={cx('modal-body')}  onSubmit={handleSubmit}>
-                <label className={cx('modal-input-label')} htmlFor='email'>Enter your email</label>
-                <input
-                    ref={emailRef}
-                    required
-                    className={cx('modal-input')} 
-                    type="text" id='emmail' 
-                    name='email'
-                />
-
-                <label className={cx('modal-input-label')} htmlFor='password'>Enter your password</label>
-                <input 
-                    ref={passwordRef} 
-                    required
-                    className={cx('modal-input')} 
-                    type="password" id='password' 
-                    name='password'
-                />
-
-                <label className={cx('modal-input-label')} htmlFor='passwordConfirm'>Password confirmation</label>
-                <input 
-                    ref={passwordConfirmRef} 
-                    required
-                    className={cx('modal-input')} 
-                    type="password" 
-                    id='passwordConfirm' 
-                    name='passwordConfirm'
-                />
-                <button disabled={loading} className={cx('submit-button')}>
-                    <span>Submit</span>
-                </button>
-                <div className={cx('login')}>
-                    <span>Already have an account?</span>
-                    <Link className={cx('login-button')} to="/login">Log in</Link>
-                </div>
-            </form>        
+            <div className={cx('modal-body')}>         
+                <button className={cx('signin-button')} onClick={handleGoogle}>
+                    <div className={cx('icon-wrapper')}>
+                        <img 
+                            alt="Google"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/180px-Google_%22G%22_Logo.svg.png"
+                            className={cx('signin-icon')}
+                        />
+                    </div>
+                    <span>Sign in with Google</span>
+                </button>  
+                <span className={cx('or')}>or</span>
+                <button className={cx('signin-button')} onClick={handleFacebook}>
+                    <div className={cx('icon-wrapper')}>
+                        <img 
+                            alt="Google"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Facebook_circle_pictogram.svg/1024px-Facebook_circle_pictogram.svg.png"
+                            className={cx('signin-icon')}
+                        />
+                    </div>
+                    <span>Sign in with Facebook</span>
+                </button>             
+            </div>        
         </div>
     );
 }

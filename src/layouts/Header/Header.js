@@ -2,18 +2,31 @@ import { useEffect, useRef, useState } from 'react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import {AiOutlineCaretUp, AiFillCaretDown, AiOutlineMenu} from 'react-icons/ai'
-import grid from '~/assets/GridSystem/grid.css'
+import { useAuth } from "~/Context/AuthContext";
+
 
 import styles from './Header.module.scss';
 import Search from '../Search/Search';
-import { Link } from 'react-router-dom';
-import config from '~/config/config';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const cx = classNames.bind(styles)
 
 
 function Header({className}) {
+    const navigate = useNavigate()
+    const { currentUser, logout } = useAuth()
+    const user = currentUser
+
+    async function handleLogout() {
+        try {
+            await logout()
+            navigate('/cng-movie')
+        } catch (error) {
+            console.log("Fail to logout");
+        }
+    }
+
     const menuMobileRef = useRef()
     const [background, setBackground] = useState(false)
     const [menuMobile, setMenuMobile] = useState(false)
@@ -45,8 +58,8 @@ function Header({className}) {
         }
     }
 
-    const wrapper = cx('wrapper', 'grid')
-    const wrapperWithBackground = cx('wrapper', 'show', 'grid')
+    const wrapper = cx('wrapper')
+    const wrapperWithBackground = cx('wrapper', 'show')
 
     return (
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
@@ -102,9 +115,33 @@ function Header({className}) {
                 </div>
                 <div className={cx('right')}>
                     <Search/>
-                    <Link to='/register' className={cx('register-button')}>
-                        <span className={cx('register-text')}>Sign in</span>
-                    </Link>
+                    {currentUser 
+                        ? 
+                            <HeadlessTippy         
+                                // visible                                          
+                                interactive                       
+                                offset={[0, 2]}             
+                                placement='bottom-end'
+                                render={attrs => (
+                                    <>
+                                        <div className={cx('account-options')} tabIndex="-1" {...attrs}>
+                                            <div onClick={handleLogout} className={cx('account-option-link')}>
+                                                <span>Log out</span>
+                                            </div>
+                                        </div>                                 
+                                    </>
+                                )}
+                            >
+                                <div className={cx('user-wrapper')}>
+                                    <span className={cx('user-name')}>{user.displayName}</span>
+                                </div>
+                            </HeadlessTippy>
+                            
+                        : 
+                            <Link to='/register' className={cx('register-button')}>
+                                <span className={cx('register-text')}>Sign in</span>
+                            </Link>
+                    } 
                 </div>
                 <div className={cx('menu-mobile', 'grid')} ref={menuMobileRef}>
                     <div className={cx('mobile-subnav-item', 'first-mobile-subnav')}>
