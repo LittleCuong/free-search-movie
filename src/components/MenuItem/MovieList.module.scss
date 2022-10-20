@@ -4,7 +4,6 @@
     padding: 0;
     height: 400px;
     transition: all 0.5s ease;
-    // margin-bottom: 10px;
 }
 
 .movie-container {
@@ -25,6 +24,7 @@
 }
 
 .movie-container {
+    padding-left: 12px;
 }
 
 .movie-list::-webkit-scrollbar {
@@ -65,12 +65,13 @@
 
     .movie-list {
         width: 200px;
-        height: 150px;
+        height: 140px;
         padding-top: 10px;
     }
     
     .movie-container {
         height: 140px;
+        padding: 4px;
     }
 }
 
@@ -82,23 +83,29 @@
     .movie-list {
         width: 300px;
         height: 230px;
-        padding-top: 10px;
+        padding-top: 6px;
     }
 }
 
 @media (min-width: 400px) and (max-width: 739px) {
     .wrapper {
         width: 340px;
-        height: 300px;
+        height: 280px;
     }
 
     .movie-container {
         height: 220px;
+        padding-left: 8px;
     }
 }
 
 @media (min-width: 740px) and (max-width: 1023px){
     .wrapper {
         width: 600px;
+        height: 350px;
+    }
+
+    .movie-container {
+        padding-left: 10px;
     }
 }

@@ -17,6 +17,7 @@ function Header({className}) {
     const navigate = useNavigate()
     const { currentUser, logout } = useAuth()
     const user = currentUser
+    // const watchlistUrl = `/watchlist/${user.uid}`
 
     async function handleLogout() {
         try {
@@ -58,6 +59,14 @@ function Header({className}) {
         }
     }
 
+    const handleWatchlist = () => {
+        if (currentUser) {
+            navigate(`/watchlist/${user.uid}`)
+        } else {
+            alert("Please sign in first")
+        }
+    }
+
     const wrapper = cx('wrapper')
     const wrapperWithBackground = cx('wrapper', 'show')
 
@@ -71,9 +80,12 @@ function Header({className}) {
                         <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
                             <span  className={cx('navbar_item-link')}>Top Rated</span>
                         </li>
-                        <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
+                        {/* <Link to={watchlistUrl} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
                             <span  className={cx('navbar_item-link')}>Watch Lists</span>
-                        </li>                   
+                        </Link>                    */}
+                        <li onClick={handleWatchlist} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
+                            <span  className={cx('navbar_item-link')}>Watch Lists</span>
+                        </li>
                         <HeadlessTippy
                             interactive                       
                             offset={[46, 10]}             
@@ -135,8 +147,7 @@ function Header({className}) {
                                 <div className={cx('user-wrapper')}>
                                     <span className={cx('user-name')}>{user.displayName}</span>
                                 </div>
-                            </HeadlessTippy>
-                            
+                            </HeadlessTippy>                        
                         : 
                             <Link to='/register' className={cx('register-button')}>
                                 <span className={cx('register-text')}>Sign in</span>

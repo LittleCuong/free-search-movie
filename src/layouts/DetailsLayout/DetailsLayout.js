@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import { useParams } from "react-router-dom";
 import Header from "../Header/Header";
 import styles from './DetailsLayout.module.scss'
+import { getDatabase, ref, push, set } from "firebase/database";
 
 import tmdApi, { movieType } from "~/api/tmdbApi";
 import apiConfig from "~/api/apiConfig";
@@ -14,6 +15,8 @@ import Footer from "~/components/Footer/Footer";
 const cx = classNames.bind(styles)
 
 function DetailsLayout() {
+    const database = getDatabase();
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -27,6 +30,7 @@ function DetailsLayout() {
         const getDetail = async () => {
             const response = await tmdApi.detail(category, id, {params: {}})
             setMovie(response);
+            console.log(response);
         }
         getDetail()
     }, [category, id])
@@ -71,8 +75,8 @@ function DetailsLayout() {
                                     </div>
                                 </div>
                                 <div className={cx('container_movie-body', 'row')}>
-                                    <Trailer data={movie.id}/> 
-                                </div>
+                                    <Trailer data={movie.id}/>                                    
+                                </div>                              
                                 <MovieList category={category} type={'similar'} id={movie.id}/>
                             </div>
                         </div>
@@ -83,33 +87,4 @@ function DetailsLayout() {
         </>
     );
 }
-
-
-{/*
-    <div 
-        className={cx('banner')}
-        style={{backgroundImage: `url(${apiConfig.originalImage(movie.poster_path)})`}}
-    </div>
-
-    <img
-        className={cx('image', 'col l-3 m-3')}
-        src={apiConfig.w500Image(movie.poster_path)}
-        alt={movie.title}
-    />
-
-    {movie.genres && movie.genres.map((genre, index) => (
-        <span 
-            className={cx('genres')}
-            key={index} 
-        >
-            {genre.name}
-        </span>
-    ))}
-
-    <Credits data={movie.id}/>
-    
-    <Trailer data={movie.id}/>            
-
-    <MovieList category={category} type={'similar'} id={movie.id}/>
->   */}
 export default DetailsLayout;

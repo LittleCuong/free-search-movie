@@ -4,7 +4,7 @@
 }
 
 .container {
-
+    margin-bottom: 14px;
 }
 
 .container_banner {
@@ -63,7 +63,7 @@
 .movie_genres {
     display: flex;
     height: 40px;
-    margin-bottom: 14px;
+    margin-bottom: 6px;
 }
 
 .genres {
@@ -106,8 +106,17 @@
     margin-bottom: 14px;
 }
 
+.streaming {
+    width: 400px;
+    height: 400px;
+}
+
 // Responsive
 @media (max-width: 319px) {
+    .container {
+        margin-bottom: 6px;
+    }
+
     .container_banner {
         display: none;
     }
@@ -298,6 +307,10 @@
 }
 
 @media (min-width: 560px) and (max-width: 739px) {
+    .container {
+        margin-bottom: 10px;
+    }
+
     .container_banner {
         height: 300px;
     }

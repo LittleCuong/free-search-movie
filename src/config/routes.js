@@ -4,7 +4,7 @@ const routes = {
     type: '/:type/',
     details: '/:category/:id/',
     register: '/register',
-    login: '/login',
+    watchlist: '/watchlist/:userId',
     private: '/user',
 };
 

@@ -1,6 +1,7 @@
 import { GoogleAuthProvider, signInWithPopup, getAuth, FacebookAuthProvider  } from "firebase/auth";
+import { doc, onSnapshot } from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
-import { auth } from "../firebase.js";
+import { auth, db } from "../firebase.js";
 
 const AuthContext = React.createContext()
 
@@ -13,6 +14,29 @@ function AuthProvider({ children }) {
     const [isLogIn, setIsLogIn] = useState(false)
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading]  = useState(true)
+    const [watchlist, setWatchList] = useState([])
+
+    // Watchlist
+    useEffect(() => {
+        if (currentUser) {
+            const movieRef = doc(db, "watchlist", currentUser.uid);
+
+            var unsubcribe = onSnapshot(movieRef, movie => {
+                if (movie.exists()) {
+                    console.log(movie.data().movie);
+                    setWatchList(movie.data().movie)
+                } else {
+                    console.log("No movies");
+                }
+            })
+
+            return () => {
+                unsubcribe()
+            }
+        };
+
+       
+    }, [currentUser])
 
     // Auth module to sign in a user
     function signup(email, password) {
@@ -54,7 +78,8 @@ function AuthProvider({ children }) {
         signInWithGoogle,
         signInWithFacebook,
         login,
-        logout
+        logout,
+        watchlist
     }
 
     return ( 

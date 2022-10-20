@@ -14,7 +14,7 @@ function MovieList(props) {
 
     // useState
     const [results, setResults] = useState([])
-
+ 
     useEffect(() => {
         const getPropose = async () => {
             let response = null;
@@ -40,6 +40,7 @@ function MovieList(props) {
 
     //Get first 10 movies
     const movieResutls = results.slice(0, 10)
+    console.log(movieResutls);
 
     return ( 
         <div className={cx('wrapper', 'grid wide')}>
