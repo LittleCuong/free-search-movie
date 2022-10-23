@@ -8,9 +8,7 @@ const cx = classNames.bind(styles)
 const IMAGE_API = 'https://image.tmdb.org/t/p/w1280';
 
 function Movie({data}) {
-    console.log('render');
-    const {category} = useParams()
-
+    
     const link = '/movie' + '/' + data.id;
 
     return ( 

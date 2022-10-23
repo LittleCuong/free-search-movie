@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
 import Header from "../Header/Header";
 import styles from './WatchlistLayout.module.scss'
-import tmdApi from "~/api/tmdbApi";
-import { useState, useEffect } from "react";
+import Movie from '~/components/Movie/Movie';
+
 import Footer from "~/components/Footer/Footer";
 import { useAuth } from "~/Context/AuthContext";
 import MovieItem from "~/components/MovieItem/MovieItem";
@@ -20,19 +20,18 @@ function WatchlistLayout() {
     // })
 
     return ( 
-        <>
+        <div className={cx('wrapper', 'grid')}>
             <Header/>
-            <div className={cx('wrapper')}>
+            <div className={cx('wrapper-body', 'grid wide row')}>
                 {watchlist.map((result, index) => (
-                    <WatchlistItem
-                        index={index}
+                    <Movie
                         key={result.id}
-                        item={result}
+                        data={result}
                     />
                 ))}
             </div>
             <Footer/>
-        </>
+        </div>
     );
 }
 
