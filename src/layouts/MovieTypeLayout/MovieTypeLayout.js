@@ -1,4 +1,4 @@
-import { useEffect, useState, memo } from 'react';
+import { useEffect, useState, memo, useRef } from 'react';
 import classNames from 'classnames/bind';
 import {FaAngleDown, FaPlus} from 'react-icons/fa'
 import { useParams } from 'react-router-dom';
@@ -14,7 +14,7 @@ import Footer from '~/components/Footer/Footer';
 const cx = classNames.bind(styles)
 
 function MovieTypeLayout(props) {
-    window.scrollTo(0,0)
+    // window.scrollTo(0,0)
 
     // Variables 
     var title = ''
@@ -22,6 +22,9 @@ function MovieTypeLayout(props) {
     // type tu tren URL
     const { type } = useParams()
     
+    // ref
+    const containerRef = useRef()
+
     // useState
     const [movies, setMovies] = useState([])
     const [genres, setGenres] = useState([])
@@ -92,19 +95,23 @@ function MovieTypeLayout(props) {
     }
 
     const loadMore = async () => {
+        
         const params = {
             page: page + 1
         }
         const response = await tmdApi.getMovieList(type, {params})
         setMovies([...movies, ...response.results])
         setPage(page + 1)
+        
+        const containerHeight = containerRef.current.offsetHeight
+        containerRef.current.style.height = containerHeight + 720 + 'px';
     }
 
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper', 'grid')}>
             <Header className={cx('propose-header')}/>
-            <div className={cx('grid')}>
-                <div className={cx('container', 'row')}>
+            <div className={cx('wrapper-body', 'grid')}>
+                <div ref={containerRef} className={cx('container', 'row no-gutters')}>
                     <div className={cx('container-filters', 'col l-2')}>
                         <h3 className={cx('container-header')}>{title}</h3>
                         <div className={cx('filter-sort')}>
@@ -163,11 +170,13 @@ function MovieTypeLayout(props) {
                             </HeadlessTippy>
                         </div>
                     </div>
-                    <div className={cx('movies-list', 'row')}>                                                                                  
-                        {movies.map(movie => (
+                    <div className={cx('container-content', 'col l-10 m-12 c-12')}>
+                        <div className={cx('movies-list', 'row sm-gutter')}>                                                                                                         
+                            {movies.map(movie => (
                                 <Movie key={movie.id} data={movie}/>
-                        ))} 
-                    </div>               
+                            ))}                    
+                        </div>
+                    </div>                
                 </div>
                 {
                     page < totalPage ? (
@@ -183,3 +192,20 @@ function MovieTypeLayout(props) {
 }
 
 export default memo(MovieTypeLayout);
+
+
+// 
+
+{/* 
+<div className={cx('grid')}>
+                <div className={cx('wrapper-content', 'row no-gutters')}>
+                    <div className={cx('wrapper-content-filter','col l-2')}></div>
+                    <div className={cx('wrapper-content-body','col l-10')}>
+                        {/* <div className={cx('row sm-gutter')}></div> 
+                        </div>
+                        </div>
+                    </div>
+
+ */}
+
+// 

@@ -32,7 +32,7 @@ function MovieList(props) {
             } else {
                 response = await tmdApi.similar(props.category, props.id)
             }
-
+            console.log(response.results);
             setResults(response.results)
         }
         getPropose()
@@ -40,7 +40,6 @@ function MovieList(props) {
 
     //Get first 10 movies
     const movieResutls = results.slice(0, 10)
-    console.log(movieResutls);
 
     return ( 
         <div className={cx('wrapper', 'grid wide')}>

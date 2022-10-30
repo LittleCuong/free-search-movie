@@ -1,13 +1,156 @@
 .wrapper {
     background-color: var(--black-color);
     width: 100%;
-    height: 600px;
+    height: auto;
     overflow: hidden;
-
 }
 
-.wrapper-body {
-    height: 100%;
+.wrapper_body {
     padding-top: 60px;
+    height: 1000px;
     overflow: hidden;
+}
+
+.wrapper_body-background {
+    height: 200px;
+    background-color: var(--green-color);
+    background-image: url('https://www.themoviedb.org/assets/2/v4/account_pipes/silver-251bf173c626c8be6f61efdd85b7009a83b2f9dfa60b80b182351a02fa2a57ec.svg');
+    background-position: center;
+}
+
+// Infor container
+.wrapper_body-infor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.wrapper_body-infor--name {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 8rem;
+    border-radius: 50%;
+}
+
+.wrapper_body-infor--about {
+    width: 600px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.about-name {
+    padding: 20px 0 0 10px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.about-number {
+    margin-top: 2px;
+    color: var(--white-color);
+    padding: 0 0 0 12px;
+}
+
+.wrapper_body-content {
+    height: 730px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.wrapper_body-content-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 319px) {
+    .wrapper_body {
+        padding-top: 30px;
+    }
+
+    .wrapper_body-background {
+        height: 60px;
+    }
+    
+    .wrapper_body-infor--name {
+        width: 30px;
+        height: 30px;
+        font-size: 1.4rem;
+    }
+    
+    .wrapper_body-infor--about {
+        width: 200px;
+        height: 40px;
+    }
+    
+    .about-name {
+        padding: 5px 0 0 5px;
+        font-size: 1rem;
+    }
+    
+    .about-number {
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 739px) {
+    .wrapper_body-background {
+        height: 80px;
+    }
+    
+    .wrapper_body-infor--name {
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+    }
+    
+    .wrapper_body-infor--about {
+        width: 300px;
+        height: 60px;
+    }
+    
+    .about-name {
+        padding: 10px 0 0 10px;
+        font-size: 1.6rem;
+    }
+    
+    .about-number {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wrapper_body-background {
+        height: 140px;
+    }
+    
+    .wrapper_body-infor--name {
+        width: 100px;
+        height: 100px;
+        font-size: 3.6rem;
+    }
+    
+    .wrapper_body-infor--about {
+        height: 100px;
+    }
+    
+    .about-name {
+        padding: 10px 0 0 10px;
+        font-size: 2rem;
+    }
+    
+    .about-number {
+        font-size: 1.4rem;
+    }
 }

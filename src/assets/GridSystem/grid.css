@@ -11,7 +11,7 @@
 
 .row {
     display: flex;
-    flex-wrap: wrap;    /*xuống dòng khi vượt kích thước*/
+    flex-wrap: wrap;    
     margin-left: -4px;
     margin-right: -4px;
 }
@@ -31,7 +31,6 @@
     padding-right: 0px;
 }
 
-    /* Mobile */
 .c-0 {
     display: none;
 }

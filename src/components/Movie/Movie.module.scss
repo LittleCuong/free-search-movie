@@ -1,11 +1,19 @@
 .wrapper {
+    position: relative;
+    max-height: 350px;
     margin-top: 12px;
-    width: 230px;
     border-radius: 8px;
     overflow: hidden;
     text-align: center;
-    // background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }    
+
+.wrapper-link{
+    display: block;
+    width: 230px;
+}
 
 .image-card {
     width: 100%;
@@ -35,6 +43,8 @@
 .movie-name {
     color: #100F0F;
     font-size: 1.4rem;
+    display: block;
+    overflow: hidden;
 
     &:hover {
         cursor: pointer;
@@ -42,10 +52,82 @@
     }
 }
 
+.button-wrapper {
+    position: relative;
+}
+
+.more-button {
+    position: absolute;
+    top: -344px;
+    right: -110px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    padding: 0;
+    transition: all 0.2s;
+
+    &:hover {
+        cursor: pointer;      
+        background-color: var(--green-color);
+    }
+
+    &:hover .more-icon {
+        color: var(--white-color);
+    }
+}
+
+.more-icon {
+    transition: all 0.2s;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: var(--black-color);
+}
+
+.options {
+    width: 130px;
+    height: 30px;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.option-item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--green-color);
+    }
+
+    &:hover .option-item_span {
+        color: var(--white-color);
+    }
+
+}
+
+.option-item_span {
+    display: block;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--black-color);
+}
+
 @media (max-width: 319px) {
     .wrapper {
         margin-top: 10px;
         height: 200px;
+    }
+
+    .wrapper-link {
+        width: 120px;
     }
 
     .image-card {
@@ -59,12 +141,23 @@
     .movie-name {
         font-size: 0.8rem;
     }    
+
+    .more-button {
+        top: -185px;
+        right: -50px;
+        width: 15px;
+        height: 15px;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 399px) {
     .wrapper {
         margin-top: 10px;
         height: 240px;
+    }
+
+    .wrapper-link {
+        width: 140px;
     }
 
     .image-card {
@@ -74,12 +167,64 @@
     .movie-name {
         font-size: 0.8rem;
     }    
+
+    .more-button {
+        top: -235px;
+        right: -66px;
+    }
 }
 
-@media (min-width: 400px) and (max-width: 739px) {
+@media (min-width: 400px) and (max-width: 499px) {  
+    .wrapper {
+        height: 250px;
+    }
+    
+    .wrapper-link {
+        width: 160px;
+    }
+
+    .image-card {
+        height: 200px;
+    }
+
+    .movie-name {
+        font-size: 1.2rem;
+    }
+
+    .more-button {
+        top: -235px;
+        right: -78px;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 559px) {  
+    .wrapper {
+        height: 280px;
+    }
+    
+    .wrapper-link {
+        width: 160px;
+    }
+
+    .image-card {
+        height: 230px;
+    }
+
+    .more-button {
+        top: -266px;
+        right: -76px;
+    }
+}
+
+@media (min-width: 560px) and (max-width: 739px) {
     .wrapper {
         margin-top: 10px;
         height: 280px;
+    }
+
+    .wrapper-link {
+        padding: 0 4px;
+        width: 180px;
     }
 
     .image-card {
@@ -89,6 +234,11 @@
     .movie-name {
         font-size: 1.2rem;
     } 
+
+    .more-button {
+        top: -276px;
+        right: -88px;
+    }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
@@ -97,7 +247,26 @@
         height: 300px;
     }
 
+    .wrapper-link {
+        width: 200px;
+    }
+
     .image-card {
         height: 260px;
+    }
+
+    .more-button {
+        top: -295px;
+        right: -96px;
+    }
+}
+
+@media (min-width: 1115px) and (max-width: 1330px) {
+    .wrapper-link {
+        width: 180px;
+    }
+
+    .more-button {
+        right: -87px;
     }
 }

@@ -6,10 +6,10 @@ import {category} from "~/api/tmdbApi";
 import { useAuth } from "~/Context/AuthContext";
 import apiConfig from "~/api/apiConfig";
 import HeadlessTippy from '@tippyjs/react/headless';
-
-import { FaPlay, FaRegHeart } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import { FiMoreHorizontal } from "react-icons/fi";
 import styles from './MovieItem.module.scss';
+import { useState } from "react";
 
 
 const cx = classNames.bind(styles)
@@ -21,14 +21,14 @@ function MovieItem(props) {
     const link = '/' + category[props.category] + '/' + item.id;
 
     // check trong watchlist co bao gom movie add hau khong
-    const inWatchList = watchlist.includes(item?.id)
+    const inWatchList = watchlist.includes(item.id)
 
     const handleAddMovie = async () => {
         const movieRef = doc(db, "watchlist", currentUser.uid)
         try {
             await setDoc(movieRef, 
                 // trong watchlist co movie thi push them vao
-                {movie: watchlist ? [...watchlist, item] : [item]}
+                {movie: watchlist ? [...watchlist, item.id] : [item.id]},
             )
             alert(`${item.title} added to Watchlist!`)
         } catch (error) {

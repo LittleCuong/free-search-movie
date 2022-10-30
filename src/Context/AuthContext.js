@@ -24,7 +24,7 @@ function AuthProvider({ children }) {
             var unsubcribe = onSnapshot(movieRef, movie => {
                 if (movie.exists()) {
                     console.log(movie.data().movie);
-                    setWatchList(movie.data().movie)
+                    setWatchList(movie.data().movie);
                 } else {
                     console.log("No movies");
                 }
@@ -33,9 +33,7 @@ function AuthProvider({ children }) {
             return () => {
                 unsubcribe()
             }
-        };
-
-       
+        };    
     }, [currentUser])
 
     // Auth module to sign in a user
