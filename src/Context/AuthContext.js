@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, signInWithPopup, getAuth, FacebookAuthProvider  } from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup, getAuth, FacebookAuthProvider } from "firebase/auth";
 import { doc, onSnapshot } from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
 import { auth, db } from "../firebase.js";
@@ -15,6 +15,8 @@ function AuthProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading]  = useState(true)
     const [watchlist, setWatchList] = useState([])
+
+    console.log(currentUser);
 
     // Watchlist
     useEffect(() => {
@@ -50,6 +52,10 @@ function AuthProvider({ children }) {
         return auth.signOut()
     }
 
+    function updatePassword(password) {
+        return currentUser.updatePassword(password)
+    }
+
     function signInWithGoogle() {
         const provider = new GoogleAuthProvider();
         auth.signInWithPopup(provider)
@@ -59,6 +65,8 @@ function AuthProvider({ children }) {
         const provider = new FacebookAuthProvider();
         auth.signInWithPopup(provider)
     }
+
+    
 
     useEffect(() => {
         const unsubcriber = auth.onAuthStateChanged(user => {

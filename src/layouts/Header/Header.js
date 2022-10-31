@@ -15,7 +15,7 @@ const cx = classNames.bind(styles)
 
 function Header({className}) {
     const navigate = useNavigate()
-    const { currentUser, logout } = useAuth()
+    const { currentUser, logout, updatePassword } = useAuth()
     const user = currentUser
     // const watchlistUrl = `/watchlist/${user.uid}`
 
@@ -67,6 +67,10 @@ function Header({className}) {
         }
     }
 
+   const handleHomepage = () => {
+        navigate('/cng-movie')
+   }
+
     const wrapper = cx('wrapper')
     const wrapperWithBackground = cx('wrapper', 'show')
 
@@ -74,15 +78,9 @@ function Header({className}) {
         <div id='header' className={background ? wrapperWithBackground : wrapper }>
                 <div className={cx('left')}>
                     <ul className={cx('navbar_list-left', 'navbar-list')} >
-                        <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                            <span  className={cx('navbar_item-link')}>For You</span>
+                        <li onClick={handleHomepage} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
+                            <span  className={cx('navbar_item-link')}>Home</span>
                         </li>
-                        <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                            <span  className={cx('navbar_item-link')}>Top Rated</span>
-                        </li>
-                        {/* <Link to={watchlistUrl} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                            <span  className={cx('navbar_item-link')}>Watch Lists</span>
-                        </Link>                    */}
                         <li onClick={handleWatchlist} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
                             <span  className={cx('navbar_item-link')}>Watch Lists</span>
                         </li>
