@@ -52,10 +52,6 @@ function AuthProvider({ children }) {
         return auth.signOut()
     }
 
-    function updatePassword(password) {
-        return currentUser.updatePassword(password)
-    }
-
     function signInWithGoogle() {
         const provider = new GoogleAuthProvider();
         auth.signInWithPopup(provider)
