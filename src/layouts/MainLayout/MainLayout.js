@@ -1,4 +1,5 @@
 import classNames from 'classnames/bind';
+import { useEffect } from 'react';
 import Footer from '~/components/Footer/Footer';
 import Header from '~/layouts/Header/Header.js';
 import Private from '~/pages/Private/Private';

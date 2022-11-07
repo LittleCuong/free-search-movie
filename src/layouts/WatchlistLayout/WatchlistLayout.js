@@ -38,8 +38,6 @@ function WatchlistLayout() {
         getId()
     }, [watchlist])
 
-    
-
     return ( 
         <div className={cx('wrapper', 'grid')}>
             <Header/>
