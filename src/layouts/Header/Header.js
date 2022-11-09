@@ -68,7 +68,7 @@ function Header({className}) {
     }
 
    const handleHomepage = () => {
-        navigate('/cng-movie')
+        navigate('/free-search-movie')
    }
 
     const wrapper = cx('wrapper')
