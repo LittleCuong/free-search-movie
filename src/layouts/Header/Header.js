@@ -79,10 +79,10 @@ function Header({className}) {
                 <div className={cx('left')}>
                     <ul className={cx('navbar_list-left', 'navbar-list')} >
                         <li onClick={handleHomepage} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                            <span  className={cx('navbar_item-link')}>Home</span>
+                            <span className={cx('navbar_item-link')}>Home</span>
                         </li>
                         <li onClick={handleWatchlist} className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                            <span  className={cx('navbar_item-link')}>Watch Lists</span>
+                            <span className={cx('navbar_item-link')}>Watch Lists</span>
                         </li>
                         <HeadlessTippy
                             interactive                       
@@ -112,10 +112,10 @@ function Header({className}) {
                             )}
                         >
                             <li className={cx('navbar_item-left', 'navbar_item', 'hover-underline-animation')}>
-                                <a href='/' className={cx('navbar_item-link', 'option-m')}>
+                                <span href='' className={cx('navbar_item-link', 'option-m')}>
                                     More
                                     <AiFillCaretDown className={cx('down-icon')}/>
-                                </a>
+                                </span>
                             </li>
                         </HeadlessTippy>
                     </ul>
