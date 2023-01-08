@@ -62,8 +62,6 @@ function AuthProvider({ children }) {
         auth.signInWithPopup(provider)
     }
 
-    
-
     useEffect(() => {
         const unsubcriber = auth.onAuthStateChanged(user => {
             setCurrentUser(user)
