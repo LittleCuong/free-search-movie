@@ -20,7 +20,7 @@ function MovieItem(props) {
     const item = props.item
     const link = '/' + category[props.category] + '/' + item.id;
 
-    // check trong watchlist co bao gom movie add hau khong
+    // check trong watchlist co bao gom movie add hay khong
     const inWatchList = watchlist.includes(item.id)
 
     const handleAddMovie = async () => {

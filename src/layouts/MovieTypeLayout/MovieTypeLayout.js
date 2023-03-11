@@ -21,7 +21,7 @@ function MovieTypeLayout(props) {
 
     // type tu tren URL
     const { type } = useParams()
-    
+    console.log(type);
     // ref
     const containerRef = useRef()
 

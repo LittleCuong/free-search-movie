@@ -83,9 +83,9 @@ function Search() {
                         placeholder='Search' 
                         className={cx('input')}     
                         onChange={(e) => setSearchValue(e.target.value)}  
-                        onFocus={() => setShowResult(true)}
-                        
-                    ></input>                   
+                        onFocus={() => setShowResult(true)}                
+                    ></input> 
+                                      
                     {!!searchValue && !loading && (
                         <AiOutlineCloseCircle 
                             className={cx('delete-icon')} 

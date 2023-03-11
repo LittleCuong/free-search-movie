@@ -24,7 +24,6 @@ function Movie({data}) {
     }
 
     const inWatchList = watchlist.includes(data.id)
-    console.log(inWatchList);
 
     const handleAddMovie = async () => {
         const movieRef = doc(db, "watchlist", currentUser.uid)
