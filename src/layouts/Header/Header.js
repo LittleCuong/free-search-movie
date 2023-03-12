@@ -15,14 +15,14 @@ const cx = classNames.bind(styles)
 
 function Header({className}) {
     const navigate = useNavigate()
-    const { currentUser, logout, updatePassword } = useAuth()
+    const { currentUser, logout } = useAuth()
     const user = currentUser
     // const watchlistUrl = `/watchlist/${user.uid}`
 
     async function handleLogout() {
         try {
             await logout()
-            navigate('/cng-movie')
+            navigate('/free-search-movie')
         } catch (error) {
             console.log("Fail to logout");
         }

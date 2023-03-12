@@ -45,7 +45,7 @@ function RegisterForm({className}) {
 
     useEffect(() => {
         if (currentUser != null) {
-            navigate('/cng-movie')
+            navigate('/free-search-movie')
         }
     }, [currentUser, navigate])
 
