@@ -57,50 +57,51 @@ function Search() {
     const handleHideResult = () => {
         setShowResult(false)
     }
-        return (
-            <HeadlessTippy
-                interactive
-                placement='bottom-end'
-                visible={showResult && searchResult.length > 0}
-                onClickOutside={handleHideResult}
-                render={attrs => (                                    
-                    <div className={cx('search-result', 'grid')} tabIndex="-1" {...attrs}>
-                        {searchResult?.map(item => (
-                            <ItemResutls 
-                                key={item.id} 
-                                data={item}
-                                category={item.media_type}
-                            />
-                        ))}
-                    </div>                                       
-                )}
-            >
-                <div className={cx('search')}>
-                    <input
-                        ref={inputRef}
-                        value={searchValue}
-                        type='text' 
-                        placeholder='Search' 
-                        className={cx('input')}     
-                        onChange={(e) => setSearchValue(e.target.value)}  
-                        onFocus={() => setShowResult(true)}                
-                    ></input> 
-                                      
-                    {!!searchValue && !loading && (
-                        <AiOutlineCloseCircle 
-                            className={cx('delete-icon')} 
-                            onClick={handleClear}
+    
+    return (
+        <HeadlessTippy
+            interactive
+            placement='bottom-end'
+            visible={showResult && searchResult.length > 0}
+            onClickOutside={handleHideResult}
+            render={attrs => (                                    
+                <div className={cx('search-result', 'grid')} tabIndex="-1" {...attrs}>
+                    {searchResult?.map(item => (
+                        <ItemResutls 
+                            key={item.id} 
+                            data={item}
+                            category={item.media_type}
                         />
-                    )}
+                    ))}
+                </div>                                       
+            )}
+        >
+            <div className={cx('search')}>
+                <input
+                    ref={inputRef}
+                    value={searchValue}
+                    type='text' 
+                    placeholder='Search' 
+                    className={cx('input')}     
+                    onChange={(e) => setSearchValue(e.target.value)}  
+                    onFocus={() => setShowResult(true)}                
+                ></input> 
+                                    
+                {!!searchValue && !loading && (
+                    <AiOutlineCloseCircle 
+                        className={cx('delete-icon')} 
+                        onClick={handleClear}
+                    />
+                )}
 
-                    {loading && (
-                        <AiOutlineLoading className={cx('loading-icon')} /> 
-                    )}
-                   
-                    <span className={cx('divider')}></span>
-                    <AiOutlineSearch className={cx('icon-search')}/>
-                </div>
-            </HeadlessTippy>
-        )
+                {loading && (
+                    <AiOutlineLoading className={cx('loading-icon')} /> 
+                )}
+                
+                <span className={cx('divider')}></span>
+                <AiOutlineSearch className={cx('icon-search')}/>
+            </div>
+        </HeadlessTippy>
+    )
 }
 export default Search;
