@@ -15,12 +15,11 @@ Technologies: ReactJS, The MovieDB API ...
 Interfaces:
 
   + Home:
- 
   ![image](https://github.com/LittleCuong/free-search-movie/assets/91473760/a6bc88e3-4958-4ab9-af33-c8b46e098f87) 
-  ![image](https://github.com/LittleCuong/free-search-movie/assets/91473760/dc26c48c-b1b4-4e31-98cb-467cc8054e21)
-  
+  ![image](https://github.com/LittleCuong/free-search-movie/assets/91473760/9fe107e9-6de1-4592-b423-4283645fa489)
+
   + Detailed movie:
-  
-  ![image](https://github.com/LittleCuong/free-search-movie/assets/91473760/b56ff779-97f5-47c2-b715-030431b3565b)
-  ![Uploading image.png…]()
+  ![image](https://github.com/LittleCuong/free-search-movie/assets/91473760/11b63f73-7ec5-466e-b51c-17682b555c00)
+
+ 
 
